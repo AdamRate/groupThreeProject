@@ -25,12 +25,12 @@
             templateUrl:"app/feature/FAQ/faq.html"
 
         }).state("futureFilms", {
-            url:"/futureFilma",
+            url:"/futureFilms",
             templateUrl:"app/feature/futurefilms/FutureFilms.html"
 
         }).state("pricing", {
             url:"/pricing",
-            templateUrl:"app/feature/price/pricing.html"
+            templateUrl:"app/feature/pricing/pricing.html"
 
         })
     });
