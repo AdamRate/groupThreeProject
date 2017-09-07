@@ -54,7 +54,7 @@
       sr.initialized = false
     } else if (typeof console !== 'undefined' && console !== null) {
       // Note: IE9 only supports console if devtools are open.
-      console.log('ScrollReveal is not supported in this browser.')
+      //console.log('ScrollReveal is not supported in this browser.')
     }
 
     return sr
@@ -169,7 +169,7 @@
     elements = _getRevealElements(target, container)
 
     if (!elements.length) {
-      console.log('ScrollReveal: reveal on "' + target + '" failed, no elements found.')
+      //console.log('ScrollReveal: reveal on "' + target + '" failed, no elements found.')
       return sr
     }
 
@@ -268,7 +268,7 @@
       }
       _init()
     } else {
-      console.log('ScrollReveal: sync failed, no reveals found.')
+     // console.log('ScrollReveal: sync failed, no reveals found.')
     }
     return sr
   }
@@ -285,8 +285,8 @@
       } else if (sr.tools.isNode(config.container)) {
         return config.container
       } else {
-        console.log('ScrollReveal: invalid container "' + config.container + '" provided.')
-        console.log('ScrollReveal: falling back to default container.')
+       // console.log('ScrollReveal: invalid container "' + config.container + '" provided.')
+       // console.log('ScrollReveal: falling back to default container.')
       }
     }
     return sr.defaults.container
