@@ -1,8 +1,8 @@
 (function() {
 
-    var homeController =  function() {
+    var HomeController =  function() {
         var vm = this;
     };
 
-    angular.module('cinema').controller('homeController', [homeController]);
+    angular.module('cinema').controller('HomeController', [HomeController]);
 }());
