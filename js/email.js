@@ -24,7 +24,7 @@ function getFormData() {
       return elements[k].item(0).name;
     }
   }).filter(function(item, pos, self) {
-    return self.indexOf(item) == pos && item;
+    return self.indexOf(item) === pos && item;
   });
   var data = {};
   fields.forEach(function(k){
