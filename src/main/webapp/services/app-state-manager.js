@@ -12,6 +12,10 @@
             url:"/allfilms",
             templateUrl:"app/feature/allfilms/allfilms.html"
 
+        }).state("specificFilm", {
+            url:"/specificFilm",
+            templateUrl:"app/feature/specificfilm/specificfilm.html"
+
         }).state("signin", {
             url:"/singin",
             templateUrl:"app/feature/sigin/sigin.html"

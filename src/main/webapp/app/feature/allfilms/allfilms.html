@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="aFilmsController as allFilms">
 
     <!-- Page Content -->
     <div class="container">
@@ -44,7 +44,7 @@
         <div class="col-md-5">
           <h3>Film One</h3>
           <p> A really long description of Film One, so that it showcases the use of paragraphs for this text.</p>
-          <a class="btn btn-primary" href="#">Go To Film!
+          <a class="btn btn-primary" ng-click="allFilms.navigate()">Go To Film! TEST
 
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
