@@ -24,9 +24,7 @@
                     return str;
                 })();
 
-            vm.videoEmbed = function () {
-                return $sce.trustAsResourceUrl(vm.filmDat['trailer']);
-            };
+            vm.videoEmbed = $sce.trustAsResourceUrl(vm.filmDat['trailer']);
         }
 
     };

@@ -62,7 +62,7 @@
             </div>
             <div ng-show = "film.filmDat['trailer'] != undefined ? true : false">
                 <p>Trailer: {{film.filmDat['name']}}</p>
-                <iframe width="560" height="315" src="error" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="{{film.videoEmbed}}" frameborder="0" allowfullscreen></iframe>
             </div>
             <!-- /.row -->
             <!-- Content Row -->
