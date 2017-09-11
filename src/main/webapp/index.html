@@ -25,21 +25,22 @@
             <li class="nav-item"><a class="nav-link" ui-sref="allfilms">All Films</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="faq">FAQs</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="pricing">Prices</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="promo">Promotions</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="signin">Log In</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-
     <div ui-view=""></div>
 
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/ui-router.min.js"></script>
+    <script data-cfasync="false" type = "text/javascript" src ="scripts/contact_me.js"></script>
+  
   <!-- Bootstrap core CSS -->
 
   <link href="style/vendor/bootstrap/css/bootstrap.min.css"  rel="stylesheet">
-
   <link href="modern-business.css" rel="stylesheet">
   <link href="style/css/creative.min.css" rel="stylesheet">
 
@@ -56,10 +57,8 @@
     <link href="app/feature/home/home.css" rel="stylesheet">
     <link href="app/feature/sigin/signin.css" rel="stylesheet">
 
-
-
     <!-- Bootstrap core JavaScript -->
-    <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery.min.js"></script>
   <script src="scripts/popper.min.js"></script>
 
   <script src="scripts/bootstrap.min.js"></script>
@@ -74,13 +73,17 @@
   <script src="app/feature/about/aboutController.js"></script>
   <script src="app/feature/contact/contactController.js"></script>
   <script src="app/feature/futurefilms/futureFilmsController.js"></script>
-  <script src="app/feature/price/priceController.js"></script>
-  <script src="app/feature/login/loginController.js"></script>
+  <script src="app/feature/price/PriceController.js"></script>
+  <script src="app/feature/sigin/SignInController.js"></script>
   <script src="app/feature/allfilms/allfilmsController.js"></script>
   <script src="app/feature/specificfilm/specificfilmController.js"></script>
 
   <script src="services/service/filmlisting/filmlisting.js"></script>
 
+
+
+    <script src="scripts/contact_me.js"></script>
+    <script data-cfasync="false" type = "text/javascript" src ="scripts/formSubmissionHandler.js"></script>
 
   <div>
     <!-- /.container -->
@@ -94,7 +97,7 @@
     </footer>
 
 
-
+    <script src="scripts/formSubmissionHandler.js"></script>
   </body>
 
 </html>

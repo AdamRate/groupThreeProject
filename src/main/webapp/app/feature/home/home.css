@@ -10,7 +10,7 @@
     @import 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic,cyrillic-ext,latin-ext';
 
 
-button {
+.Xbutton {
   color: #454545;
   background: transparent;
   border-width: 2px;
@@ -25,7 +25,7 @@ button {
   font-family: comfortaa;
   font-weight: bold;
 }
-button:before, button:after {
+.Xbutton:before, .Xbutton:after {
   content: '';
   display: block;
   position: absolute;
@@ -36,27 +36,28 @@ button:before, button:after {
   height: 1em;
   transition: all 0.3s ease-in-out;
 }
-button:before {
+.Xbutton:before {
   top: -6px;
   left: -6px;
   border-width: 2px 0 0 2px;
   z-index: 5;
 }
-button:after {
+.Xbutton:after {
   bottom: -6px;
   right: -6px;
   border-width: 0 2px 2px 0;
 }
-button:hover:before, button:hover:after {
+.Xbutton:hover:before, .Xbutton:hover:after {
   width: calc(100% + 12px);
   height: calc(100% + 12px);
   border-color: #fff;
 }
-button:hover {
+.Xbutton:hover {
   color: #353535;
   background-color: #fff;
   border-color: #fff;
 }
+
 .panel {
   max-width: 960px;
   text-align: center;

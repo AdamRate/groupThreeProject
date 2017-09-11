@@ -21,7 +21,7 @@
                 "runtime" : "1 hr, 58mins",
                 "desc" : "Meet Mija, a young girl who risks everything to prevent a powerful, multi-national company from kidnapping her best friend - a fascinating animal named Okja.",
                 "trailer" : "https://www.youtube.com/embed/AjCebKn4iic",
-                "img" : "img/movies/okja-poster.jpg",
+                "img" : "src/main/webapp/img/movies/okja-poster.jpg",
                 "castList" : ["Susan","Mary","Johnathan","Chris","Sanders", "Billabob"]
             }]
             // just a reference to help for later http://www.bbfc.co.uk/what-classification/u
