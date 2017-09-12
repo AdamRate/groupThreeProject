@@ -8,7 +8,7 @@ function showRegistration(){
 }
 function register(name, age, phone, email, password1, password2){
     // console.log(name, age, phone, email, password1, password2);
-    if (password1 != password2){
+    if (password1 !== password2){
         alert("Your Passwords do not match");
     }   
     else{
