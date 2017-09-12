@@ -4,7 +4,6 @@
         var msg = {};
         msg.list = ["this is the message"];
         msg.filmDat = {};
-        //console.log("my msg length: " + msg.list.length);
         msg.add = function(val){ msg.list.push(val);}
 
         msg.addData = function(name){

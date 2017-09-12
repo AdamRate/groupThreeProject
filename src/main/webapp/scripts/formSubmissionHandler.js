@@ -24,7 +24,7 @@ function getFormData() {
             return elements[k].item(0).name;
         }
     }).filter(function(item, pos, self) {
-        return self.indexOf(item) == pos && item;
+        return self.indexOf(item) === pos && item;
     });
     var data = {};
     fields.forEach(function(k){
@@ -69,7 +69,6 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         var url = event.target.action;  //
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url);
-        // xhr.withCredentials = true;
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
             console.log( xhr.status, xhr.statusText )
