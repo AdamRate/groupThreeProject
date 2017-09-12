@@ -6,10 +6,8 @@ function validEmail(email) { // see:
 
 function validateHuman(honeypot) {
     if (honeypot) {  //if hidden form filled up
-        console.log("Robot Detected!");
         return true;
     } else {
-        console.log("Welcome Human!");
     }
 }
 
@@ -48,7 +46,6 @@ function getFormData() {
             }
         }
     });
-    console.log(data);
     return data;
 }
 
@@ -71,8 +68,6 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         xhr.open('POST', url);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
-            console.log( xhr.status, xhr.statusText )
-            console.log(xhr.responseText);
             document.getElementById('gform').style.display = 'none'; // hide form
             document.getElementById('thankyou_message').style.display = 'block';
             return;
@@ -85,7 +80,6 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     }
 }
 function loaded() {
-    console.log('contact form submission handler loaded successfully');
     // bind to the submit event of our form
     var form = document.getElementById('gform');
     form.addEventListener("submit", handleFormSubmit, false);
