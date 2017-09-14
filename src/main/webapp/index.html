@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"   ng-app="cinema">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>QA Cinemas | Group 3</title>
+</head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" ui-sref="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="contact" >Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="futureFilms">Coming Soon</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="allfilms">All Films</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="faq">FAQs</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="pricing">Prices</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="promo">Promotions</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="signin">Log In</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div ui-view=""></div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/ui-router.min.js"></script>
+    <script data-cfasync="false" type = "text/javascript" src ="scripts/contact_me.js"></script>
+  
+  <!-- Bootstrap core CSS -->
+
+  <link href="style/vendor/bootstrap/css/bootstrap.min.css"  rel="stylesheet">
+  <link href="modern-business.css" rel="stylesheet">
+  <link href="style/css/creative.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="style/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="style/css/magnific-popup.css" rel="stylesheet">
+  <link href="style/css/newCss.css">
+
+    <!-- OUR CUSTOM CSS -->
+    <link href="app/feature/home/home.css" rel="stylesheet">
+    <link href="app/feature/sigin/signin.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.min.js"></script>
+
+  <script src="scripts/bootstrap.min.js"></script>
+
+
+  <script src="services/app.js"></script>
+  <script src="services/app-state-manager.js"></script>
+
+    <script src="app/feature/sigin/SignIn.js"></script>
+
+  <script src="app/feature/home/homeController.js"></script>
+  <script src="app/feature/about/aboutController.js"></script>
+  <script src="app/feature/contact/contactController.js"></script>
+  <script src="app/feature/futurefilms/futureFilmsController.js"></script>
+  <script src="app/feature/price/PriceController.js"></script>
+  <script src="app/feature/sigin/SignInController.js"></script>
+  <script src="app/feature/allfilms/allfilmsController.js"></script>
+  <script src="app/feature/specificfilm/specificfilmController.js"></script>
+
+  <script src="services/service/filmlisting/filmlisting.js"></script>
+
+
+
+    <script src="scripts/contact_me.js"></script>
+    <script data-cfasync="false" type = "text/javascript" src ="scripts/formSubmissionHandler.js"></script>
+
+  <div>
+    <!-- /.container -->
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; QAC Cinema's Ltd 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+    <script src="scripts/formSubmissionHandler.js"></script>
+  </body>
+
+</html>

@@ -4,6 +4,11 @@ function showRegistration(){
     event.preventDefault();      
     
 }
+
+function makeNewUser(name,email,age,phone,pass) {
+    // LIST_OF_USERS.ADD(..........);
+}
+
 function register(name, age, phone, email, password1, password2){
     if (password1 !== password2){
         alert("Your Passwords do not match");
@@ -14,13 +19,6 @@ function register(name, age, phone, email, password1, password2){
     return false;
 }
 
-function makeNewUser(name,email,age,phone,pass) {
-}
-function signIn(email, password){
-    attemptToSignIn(email, password);
-    
-    return false;
-}
 function forgotDetails(){
     document.getElementById('forgot').style.display= "inline-block";
     document.getElementById('signIn').style.display= "none";
@@ -51,6 +49,14 @@ function attemptToSignIn(email,pass) {
         }
     }
 }
+
+
+function signIn(email, password){
+    attemptToSignIn(email, password);
+    
+    return false;
+}
+
 
 
 

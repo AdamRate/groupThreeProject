@@ -24,10 +24,12 @@
                     return str;
                 })();
 
-            vm.videoEmbed = $sce.trustAsResourceUrl(vm.filmDat['trailer']);
+            vm.videoEmbed = $sce.trustAsResourceUrl(vm.filmDat["trailer"]);
+
         }
 
     };
 
-    angular.module('cinema').controller('sFController', ['filmLoader', '$state', '$sce', sFController]);
+    angular.module("cinema").controller("sFController", ['filmLoader', '$state', '$sce', sFController]);
+
 }());

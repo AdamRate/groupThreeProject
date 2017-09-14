@@ -66,8 +66,10 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         var url = event.target.action;  //
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url);
+
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
+
             document.getElementById('gform').style.display = 'none'; // hide form
             document.getElementById('thankyou_message').style.display = 'block';
             return;
