@@ -50,6 +50,7 @@ function bounceOut(x) {
 $.extend( $.easing,
 {
 	def: "easeOutQuad",
+
 	swing: function (x) {
 		return $.easing[$.easing.def](x);
 	},

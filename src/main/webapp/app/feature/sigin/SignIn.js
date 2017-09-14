@@ -1,5 +1,3 @@
-//let ARRAY_OF_USER_EMAILS = database.USER_EMAILS;
-
 function showRegistration(){
     document.getElementById('register').style.display= "inline-block";
     document.getElementById('signIn').style.display= "none";
@@ -20,7 +18,6 @@ function register(name, age, phone, email, password1, password2){
     } 
     return false;
 }
-
 
 function forgotDetails(){
     document.getElementById('forgot').style.display= "inline-block";
@@ -53,11 +50,13 @@ function attemptToSignIn(email,pass) {
     }
 }
 
+
 function signIn(email, password){
     attemptToSignIn(email, password);
     
     return false;
 }
+
 
 
 

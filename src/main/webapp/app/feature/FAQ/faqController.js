@@ -5,4 +5,5 @@
     };
 
     angular.module("cinema").controller("faqController", [faqController]);
+
 }());

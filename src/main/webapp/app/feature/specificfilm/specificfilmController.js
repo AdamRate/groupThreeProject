@@ -25,9 +25,11 @@
                 })();
 
             vm.videoEmbed = $sce.trustAsResourceUrl(vm.filmDat["trailer"]);
+
         }
 
     };
 
     angular.module("cinema").controller("sFController", ['filmLoader', '$state', '$sce', sFController]);
+
 }());

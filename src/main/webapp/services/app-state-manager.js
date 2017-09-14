@@ -40,6 +40,10 @@
             url:"/promo",
             templateUrl:"src/main/webapp/app/feature/promo/promo.html"
 
+        }).state("team", {
+            url:"/team",
+            templateUrl:"src/main/webapp/app/feature/team/team.html"
+			
 
         })
     });
