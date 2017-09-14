@@ -13,7 +13,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img class="logo" src="/main/webapp/img/logo.png" alt=""></a>
+        <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,61 +25,22 @@
             <li class="nav-item"><a class="nav-link" ui-sref="allfilms">All Films</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="faq">FAQs</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="pricing">Prices</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="promo">Promotions</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="signin">Log In</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('http://s3.amazonaws.com/digitaltrends-uploads-prod/2014/12/ant-man-banner.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3> </h3>
-              <p> </p>  
-            </div>
-          </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://cdn.collider.com/wp-content/uploads/dark-knight-rises-movie-poster-banner-catwoman.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3> </h3>
-              <p> </p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://www.bleedingcool.com/wp-content/uploads/2017/05/18198201_1305343799560849_1174691762453026571_n.png')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3> </h3>
-              <p> </p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </header>
-
     <div ui-view=""></div>
 
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/ui-router.min.js"></script>
+    <script data-cfasync="false" type = "text/javascript" src ="scripts/contact_me.js"></script>
+  
   <!-- Bootstrap core CSS -->
 
   <link href="style/vendor/bootstrap/css/bootstrap.min.css"  rel="stylesheet">
-
   <link href="modern-business.css" rel="stylesheet">
   <link href="style/css/creative.min.css" rel="stylesheet">
 
@@ -92,8 +53,12 @@
   <link href="style/css/magnific-popup.css" rel="stylesheet">
   <link href="style/css/newCss.css">
 
-  <!-- Bootstrap core JavaScript -->
-    <script src="scripts/jquery.min.js"></script>
+    <!-- OUR CUSTOM CSS -->
+    <link href="app/feature/home/home.css" rel="stylesheet">
+    <link href="app/feature/sigin/signin.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+  <script src="scripts/jquery.min.js"></script>
   <script src="scripts/popper.min.js"></script>
 
   <script src="scripts/bootstrap.min.js"></script>
@@ -102,15 +67,23 @@
   <script src="services/app.js"></script>
   <script src="services/app-state-manager.js"></script>
 
+    <script src="app/feature/sigin/SignIn.js"></script>
 
   <script src="app/feature/home/homeController.js"></script>
   <script src="app/feature/about/aboutController.js"></script>
   <script src="app/feature/contact/contactController.js"></script>
   <script src="app/feature/futurefilms/futureFilmsController.js"></script>
-  <script src="app/feature/pricing/priceController.js"></script>
-  <script src="app/feature/login/loginController.js"></script>
+  <script src="app/feature/price/PriceController.js"></script>
+  <script src="app/feature/sigin/SignInController.js"></script>
+  <script src="app/feature/allfilms/allfilmsController.js"></script>
+  <script src="app/feature/specificfilm/specificfilmController.js"></script>
+
+  <script src="services/service/filmlisting/filmlisting.js"></script>
 
 
+
+    <script src="scripts/contact_me.js"></script>
+    <script data-cfasync="false" type = "text/javascript" src ="scripts/formSubmissionHandler.js"></script>
 
   <div>
     <!-- /.container -->
@@ -124,7 +97,7 @@
     </footer>
 
 
-
+    <script src="scripts/formSubmissionHandler.js"></script>
   </body>
 
 </html>

@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="aFilmsController as allFilms">
 
     <!-- Page Content -->
     <div class="container">
@@ -14,16 +14,6 @@
         </li>
 
         <li class="breadcrumb-item active">All Films</li>
-
-          <div align ="right">
-              <select>
-                  <option value="SortBy">Sort By</option>
-                  <option value = "Title"> Title </option>
-                  <option value = "AgeRating"> Age Rating </option>
-                  <option value = "Genre"> Genre </option>
-                  <option value = "RunLength"> Length </option>
-              </select>
-          </div>
       </ol>
 
       <!-- Film One -->
@@ -37,7 +27,7 @@
                       <div class="col-lg-4 col-sm-6">
                           <a class="portfolio-box">
                      <!--   <a class="portfolio-box" href="FILM LINK HERE">-->
-                          <img class="img-fluid" src="img/spo.jpg" alt="">
+                          <img class="img-fluid" src="src/main/webapp/img/spo.jpg" alt="">
                           <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                               <div class="project-name">
@@ -54,7 +44,7 @@
         <div class="col-md-5">
           <h3>Film One</h3>
           <p> A really long description of Film One, so that it showcases the use of paragraphs for this text.</p>
-          <a class="btn btn-primary" href="#">Go To Film!
+          <a class="btn btn-primary" ng-click="allFilms.navigate()">Go To Film! TEST
 
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
@@ -74,7 +64,7 @@
                           <div class="col-lg-4 col-sm-6">
                               <a class="portfolio-box">
                                   <!--   <a class="portfolio-box" href="FILM 2 LINK HERE">-->
-                              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+                              <img class="img-fluid" src="src/main/webapp/img/portfolio/thumbnails/1.jpg" alt="">
                               <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                   <div class="project-category text-faded">
@@ -112,7 +102,7 @@
                             <div class="col-lg-4 col-sm-6">
                                 <a class="portfolio-box">
                                     <!--   <a class="portfolio-box" href="FILM 3 LINK HERE">-->
-                                <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
+                                <img class="img-fluid" src="src/main/webapp/img/portfolio/thumbnails/2.jpg" alt="">
                                 <div class="portfolio-box-caption">
                                   <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
@@ -150,7 +140,7 @@
                             <div class="col-lg-4 col-sm-6">
                                 <a class="portfolio-box">
                                     <!--   <a class="portfolio-box" href="FILM 3 LINK HERE">-->
-                                <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
+                                <img class="img-fluid" src="src/main/webapp/img/portfolio/thumbnails/3.jpg" alt="">
                                 <div class="portfolio-box-caption">
                                   <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">

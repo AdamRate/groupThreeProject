@@ -1,79 +1,86 @@
 <div ng-controller="faqController">
 
-    <!-- Page Content -->
-    <div class="container">
+    <h1 style="text-align: center" class="mt-4 mb-3">FAQs</h1>
 
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">FAQs
-      </h1>
+    <div class="panel-group" id="accordion">
 
-      <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="card">
-          <div class="card-header" role="tab" id="headingOne">
-            <h5 class="mb-0">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Where are we?</a>            
-            </h5>
-          </div>
+        <!-- Panel one -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:;" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+                    Where are our venus located? - click me
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    To find out our location, please click on this link to our Contact Page https://maryopenshaw.github.io/groupThreeProject/#/contact
+                </div>
+            </div>
+        </div>
 
-          <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-            <div class="card-body">
-              To find out our location, please click on this link to our <a ui-sref="contact">Contact Page</a>.
+
+        <!-- Panel two -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:;" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">
+                            What prices do we charge?
+                    </a>
+                </h4>
             </div>
-          </div>
+            <div id="collapseTwo" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    To find out our prices, please click on this link to our Pricing Page https://maryopenshaw.github.io/groupThreeProject/#/price
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <div class="card-header" role="tab" id="headingTwo">
-            <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What prices do we charge?
-              </a>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-            <div class="card-body">
-              To find out our prices, please click on this link to our <a href="/main/webapp/app/feature/error/404.html">Pricing Page</a>.
+
+
+
+        <!-- Panel three -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:;" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree">
+                            Do we provide disability access?
+                    </a>
+                </h4>
             </div>
-          </div>
+            <div id="collapseThree" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Yes, all of our theatres have ramps, and are made to be comfortable to all members of our audience.
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <div class="card-header" role="tab" id="headingThree">
-            <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Do we provide disability access?
-              </a>
-            </h5>
-          </div>
-          <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-            <div class="card-body">
-              Yes, all of our theatres have ramps, and are made to be comfortable to all members of our audience.
+
+
+
+
+        <!-- Panel Four -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="javascript:;" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour">
+                     I need to cancel some tickets that I have purchased
+                    </a>
+                </h4>
             </div>
-          </div>
+            <div id="collapseFour" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Please find a suitable way of contacting us from our Contact Page Our staff will be happy to deal with you. https://maryopenshaw.github.io/groupThreeProject/#/contact
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <div class="card-header" role="tab" id="headingFour">
-              <h5 class="mb-0">
-                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">I need to cancel some tickets that I have purchased?
-                </a>
-              </h5>
-            </div>
-            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
-              <div class="card-body">
-                Please find a suitable way of contacting us from our <a ui-sref="contact">Contact Page</a>. Our staff will be happy to deal with you.
-              </div>
-            </div>
-          </div>
-        <div class="card">
-          <div class="card-header" role="tab" id="headingLast">
-            <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseLast" aria-expanded="false" aria-controls="collapseLast">I got my d*** stuck in a toaster, what should I do?</a>
-            </h5>
-          </div>
-          <div id="collapseLast" class="collapse" role="tabpanel" aria-labelledby="headingLast">
-            <div class="card-body">
-              There is no saving you, commit to git, then commit suicide.
-            </div>
-          </div>
-        </div>
-      </div>
+<br>
+<br>
+
+
 
     </div>
-    <!-- /.container -->
+
+
+    <link href='faq.css' rel='stylesheet' type='text/css'>
+
 </div>

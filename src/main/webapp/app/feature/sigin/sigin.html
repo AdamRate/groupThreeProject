@@ -87,25 +87,30 @@
     </div>
     <!-- /.container -->
 
-    <div id='forgot' class="formCustom" style="display: none">
-      <div class="formCustom">
-        <br><br>
-        <h1 >Forgotten Details? <br>
-          <br><br>
-          <small> Enter the email address you used </small></h1>          
-        <form name="sentMessage" id="regForm" novalidate>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Email Address:</label>
-              <input type="email" class="form-control" id="forgotEmail" required data-validation-required-message="Please enter your email address.">
-            </div>
-          </div>
-          <div id="success"></div>
-          <!-- For success/fail messages -->
-          <br><br>
-          <button onclick="remindDetails(document.getElementById('forgotEmail').value)" type="submit" class="btn btn-primary">Forgot Details?</button>
-        </form>
-        <br><br><br>
-      </div>
-    </div>
+<div class="formCustom">
+
+      <div id='forgot' class="row" style="display: none">
+        <div class="formCustom">
+          <br><br>
+          <h1 class="mt-4 mb-3"><strong>Forgotten Details</strong></h1>
+          <p style="text-align: center;">____________________________</p>
+            <br>
+            Please enter the email address you used</h1>
+          <br><br><br>
+          <form name="sentMessage" id="regForm" novalidate>
+            <div class="control-group form-group">
+              <div class="controls">
+                <input placeholder="Email Address" style="text-align: center" type="email" class="form-control" id="forgotEmail" required data-validation-required-message="Please enter your email address.">
+              </div>
+            </div>
+            <div id="success"></div>
+            <!-- For success/fail messages -->
+            <br><br>
+            <button onclick="remindDetails(document.getElementById('forgotEmail').value)" type="submit" class="btn btn-primary">Send Verification Email</button>
+          </form>
+          <br><br><br>
+        </div>
+      </div>
+
+      </div>
 

@@ -3,7 +3,7 @@
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
@@ -37,16 +37,16 @@
 
   // Scroll reveal calls
   window.sr = ScrollReveal();
-  sr.reveal('.sr-icons', {
+  sr.reveal(".sr-icons", {
     duration: 600,
     scale: 0.3,
     distance: '0px'
   }, 200);
-  sr.reveal('.sr-button', {
+  sr.reveal(".sr-button", {
     duration: 1000,
     delay: 200
   });
-  sr.reveal('.sr-contact', {
+  sr.reveal(".sr-contact", {
     duration: 600,
     scale: 0.3,
     distance: '0px'
@@ -55,7 +55,7 @@
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
-    type: 'image',
+    type: "image",
     tLoading: 'Loading image #%curr%...',
     mainClass: 'mfp-img-mobile',
     gallery: {
