@@ -4,12 +4,9 @@
         var msg = {};
         msg.list = ["this is the message"];
         msg.filmDat = {};
-        //console.log("my msg length: " + msg.list.length);
         msg.add = function(val){ msg.list.push(val);}
 
         msg.addData = function(name){
-            console.log("writing "+name+":data to service.");
-
             //this is where we bind the JSON
                 // read entire list from web - isolate the entry we want and then assign to "filmDat"
                 // the webpage should be happy with that
