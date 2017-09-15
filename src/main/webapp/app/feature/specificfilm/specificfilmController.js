@@ -3,7 +3,7 @@
     var sFController =  function(filmLoader, $state, $sce) {
         var vm = this;
 
-        vm.filmDat = filmLoader['filmDat'][0];
+        vm.filmDat = filmLoader['filmDat'][filmLoader['filmNo']];
 
         // redirect to somewhere more meaningful
         if(vm.filmDat == undefined){
@@ -11,6 +11,7 @@
             $state.go('allfilms');
         }
         else {
+            // generate cast List
             vm.castList = (function () {
                     var str = "";
                     for (var x = 0; x < vm.filmDat['castList'].length; x++) {
