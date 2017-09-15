@@ -44,7 +44,6 @@
             url:"/team",
             templateUrl:"src/main/webapp/app/feature/team/team.html"
 			
-
         })
     });
 }());

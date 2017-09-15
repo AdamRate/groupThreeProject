@@ -19,6 +19,13 @@ function register(name, age, phone, email, password1, password2){
     return false;
 }
 
+function makeNewUser(name,email,age,phone,pass) {
+}
+function signIn(email, password){
+    attemptToSignIn(email, password);
+    
+    return false;
+}
 function forgotDetails(){
     document.getElementById('forgot').style.display= "inline-block";
     document.getElementById('signIn').style.display= "none";

@@ -4,7 +4,6 @@
         var msg = {};
         msg.list = ["this is the message"];
         msg.filmDat = {};
-
         msg.add = function(val){ msg.list.push(val);}
 
         msg.addData = function(name){
@@ -32,6 +31,6 @@
         return msg;
     };
 
-    angular.module("cinema").service("filmLoader", ['$http', filmLoader]);
 
 }());
+    angular.module("cinema").service("filmLoader", ['$http', filmLoader]);
