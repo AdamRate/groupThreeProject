@@ -4,5 +4,6 @@
         var vm = this;
     };
 
-    angular.module('cinema').controller('PromoController', [PromoController]);
+    angular.module("cinema").controller("PromoController", [PromoController]);
+
 }());

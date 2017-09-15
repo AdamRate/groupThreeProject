@@ -37,16 +37,20 @@
 
   // Scroll reveal calls
   window.sr = ScrollReveal();
-  sr.reveal('.sr-icons', {
+
+  sr.reveal(".sr-icons", {
+
     duration: 600,
     scale: 0.3,
     distance: '0px'
   }, 200);
-  sr.reveal('.sr-button', {
+
+  sr.reveal(".sr-button", {
     duration: 1000,
     delay: 200
   });
-  sr.reveal('.sr-contact', {
+  sr.reveal(".sr-contact", {
+
     duration: 600,
     scale: 0.3,
     distance: '0px'
@@ -55,7 +59,8 @@
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
-    type: 'image',
+
+    type: "image",
     tLoading: 'Loading image #%curr%...',
     mainClass: 'mfp-img-mobile',
     gallery: {

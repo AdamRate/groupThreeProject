@@ -1,13 +1,15 @@
-//let ARRAY_OF_USER_EMAILS = database.USER_EMAILS;
-
 function showRegistration(){
     document.getElementById('register').style.display= "inline-block";
     document.getElementById('signIn').style.display= "none";
     event.preventDefault();      
     
 }
+
+function makeNewUser(name,email,age,phone,pass) {
+    // LIST_OF_USERS.ADD(..........);
+}
+
 function register(name, age, phone, email, password1, password2){
-    // console.log(name, age, phone, email, password1, password2);
     if (password1 !== password2){
         alert("Your Passwords do not match");
     }   
@@ -18,10 +20,8 @@ function register(name, age, phone, email, password1, password2){
 }
 
 function makeNewUser(name,email,age,phone,pass) {
-    // LIST_OF_USERS.ADD(..........);
 }
 function signIn(email, password){
-    // console.log(email ,password);
     attemptToSignIn(email, password);
     
     return false;
@@ -56,6 +56,14 @@ function attemptToSignIn(email,pass) {
         }
     }
 }
+
+
+function signIn(email, password){
+    attemptToSignIn(email, password);
+    
+    return false;
+}
+
 
 
 

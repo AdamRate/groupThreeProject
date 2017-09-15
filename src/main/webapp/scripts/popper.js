@@ -28,7 +28,7 @@
 	(global.Popper = factory());
 }(this, (function () { 'use strict';
 
-var nativeHints = ['native code', '[object MutationObserverConstructor]'];
+var nativeHints = ["native code", '[object MutationObserverConstructor]'];
 
 /**
  * Determine if a function is implemented natively (as opposed to a polyfill).
@@ -347,7 +347,9 @@ var isIE10$1 = function () {
 };
 
 function getSize(axis, body, html, computedStyle) {
-  return Math.max(body['offset' + axis], html['client' + axis], html['offset' + axis], isIE10$1() ? html['offset' + axis] + computedStyle['margin' + (axis === 'Height' ? 'Top' : 'Left')] + computedStyle['margin' + (axis === 'Height' ? 'Bottom' : 'Right')] : 0);
+
+  return Math.max(body["offset" + axis], html["client" + axis], html["offset" + axis], isIE10$1() ? html["offset" + axis] + computedStyle["margin" + (axis === "Height" ? "Top" : "Left")] + computedStyle["margin" + (axis === "Height" ? "Bottom" : "Right")] : 0);
+
 }
 
 function getWindowSizes() {
@@ -379,8 +381,10 @@ var createClass = function () {
   }
 
   return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
+
+    if (protoProps){ defineProperties(Constructor.prototype, protoProps);}
+  if (staticProps) {defineProperties(Constructor, staticProps);}
+
     return Constructor;
   };
 }();

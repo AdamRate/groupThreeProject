@@ -4,5 +4,6 @@
         var vm = this;
     };
 
-    angular.module('cinema').controller('faqController', [faqController]);
+    angular.module("cinema").controller("faqController", [faqController]);
+
 }());

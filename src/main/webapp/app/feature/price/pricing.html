@@ -8,7 +8,7 @@
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
+          <a ui-sref="home">Home</a>
         </li>
         <li class="breadcrumb-item active">Booking</li>
       </ol>
@@ -26,7 +26,7 @@
               <li class="list-group-item">Ages: 16+</li>
               <li class="list-group-item">
                 <dropdown></dropdown>
-                <a href="#" class="btn btn-primary">Add to Basket</a>
+                <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
               </li>
             </ul>
           </div>
@@ -41,7 +41,7 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">*Valid student card required</li>
               <li class="list-group-item">
-                <a href="#" class="btn btn-primary">Add to Basket</a>
+                <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
               </li>
             </ul>
           </div>
@@ -57,8 +57,8 @@
               <li class="list-group-item">Ages: 1-14</li>
               <li class="list-group-item">
 
-                
-                <a href="#" class="btn btn-primary">Add to Basket</a>
+                <!--any button that doesn't was never linked to anything should be disabled untill they are ready to be worked on -->
+                <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
 
               </li>
             </ul>
@@ -72,6 +72,10 @@
 
     <br><br><br><br>
     <div style="text-align: right;" class="container">
-    <img src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/gold-pill-paypalcheckout-26px.png" alt="PayPal Checkout">
-    </div>
+      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="FYFL8TCELA676">
+        <input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>    </div>
     <br><br>
