@@ -1,4 +1,4 @@
-
+package interoprability;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -15,22 +15,22 @@ import javax.inject.Named;
 public class DBConnect {
 
 
-
-
-
     public Connection createConnection(String ipAddress,String port, String dbName,String username, String password) {
         Connection myConnection = null;
         System.out.println("-------- MySQL JDBC Connection Testing ------------");
         System.out.println(("jdbc:mysql://"+ ipAddress + ":" + port + "/" + dbName + "," + username +"," + password));
-        try {
+        try
+        {
             Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
+        }
+        catch (ClassNotFoundException e)
+        {
             System.out.println("Where is your MySQL JDBC Driver?");
             e.printStackTrace();
             return myConnection;
         }
 
-        System.out.println("MySQL JDBC Driver Registered!");
+        System.out.println("Attempting ...");
         Connection connection = null;
 
         try {
@@ -45,7 +45,7 @@ public class DBConnect {
         }
 
         if (connection != null) {
-            System.out.println("You made it, take control your database now!");
+            System.out.println("Connected.");
             myConnection = connection;
         } else {
             System.out.println("Failed to make connection!");
@@ -53,21 +53,62 @@ public class DBConnect {
         return myConnection;
     }
 
+    public void closeConnection(Connection myConnection) {
+        try
+        {
+            myConnection.close();
+            System.out.println("Connection Closed.");
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public  String getUsername(Connection myConnection,int UserID) {
+        String result = "";
+        try {
+
+            Statement stmt = myConnection.createStatement();
+            ResultSet rs = stmt.executeQuery("select Username from User where UserID = " + UserID);
+            while (rs.next()) {
+                result += rs.getString("Username");
+
+            }
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
+    public void createCustomerUser(Connection myConnection,int userID, String username, String password) {
+        String accessLevel = "customer";
+        String query = ("insert into User(UserID, Username, Password, AccessLevel)" +
+                " VALUES (userID, username, password, accessLevel");
+        PreparedStatement preparedStmt;
+
+        try {
+            preparedStmt = myConnection.prepareStatement(query);
+            preparedStmt.execute();
+            System.out.println("Inserted.");
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
+
+
+    }
+
+
     @Named
     public String generateId(){
         return "10-983-" + Math.abs(new Random().nextInt());
 
     }
-
-
-    public void closeConnection(Connection myConnection) {
-        try {
-            myConnection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
 
     public void putTickets(Connection myConnection, String filmTitle,String type, Time time, Date date, String seatNumber, String price) {
         String query = " insert into tickets (title,type, time, date, seatNumber, filmType, price)"
@@ -89,8 +130,6 @@ public class DBConnect {
         }
     }
 
-
-
     public  int getId(Connection myConnection,String filmTitle) {
         String result = "";
         try {
@@ -109,7 +148,6 @@ public class DBConnect {
         int resultx = Integer.parseInt(result);
         return resultx;
     }
-
 
     public  int getPrice(Connection myConnection,int price) {
         String result = "";
@@ -130,29 +168,6 @@ public class DBConnect {
         return resultx;
     }
 
-
-
-    public  String getName(Connection myConnection,int ticketid) {
-        String result = "";
-        try {
-
-            Statement stmt = myConnection.createStatement();
-            ResultSet rs = stmt.executeQuery("select filmTitle from tickets where ticketid = " + ticketid);
-            while (rs.next()) {
-                result = result + rs.getString("filmTitle");
-
-            }
-
-        } catch (SQLException e) {
-
-            e.printStackTrace();
-        }
-        System.out.println(result);
-        return result;
-    }
-
-
-
     public  void removeProductById(Connection myConnection,int ticketid) {
         String query = "delete from tickets where ticketid = ?";
 
@@ -170,7 +185,6 @@ public class DBConnect {
 
 
     }
-
 
     public  void removeProductByName(Connection myConnection,String filmTitle) {
         String query = "delete from tickets where filmtitle = ?";

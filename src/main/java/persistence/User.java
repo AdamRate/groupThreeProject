@@ -6,53 +6,53 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Movie {
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
-	private String title;
-	private String genre;
-	private String ageRating;
+	private Long UserID;
+	private String Username;
+	private String Password;
+	private String AccessLevel;
 	
-	public Movie(){}
-	
-	public Movie(Long id, String title, String genre, String ageRating) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.genre = genre;
-		this.ageRating = ageRating;
-	}
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getGenre() {
-		return genre;
-	}
-	public void setGenre(String genre) {
-		this.genre = genre;
-	}
-	public String getAgeRating() {
-		return ageRating;
-	}
-	public void setAgeRating(String ageRating) {
-		this.ageRating = ageRating;
-	}
-	
-	
-	
+	public User(){}
 
-	
-	
+	public User(String username, String password, String accessLevel) {
+		super();
+		Username = username;
+		Password = password;
+		AccessLevel = accessLevel;
+	}
+
+	public Long getUserID() {
+		return UserID;
+	}
+
+	public void setUserID(Long userID) {
+		UserID = userID;
+	}
+
+	public String getUsername() {
+		return Username;
+	}
+
+	public void setUsername(String username) {
+		Username = username;
+	}
+
+	public String getPassword() {
+		return Password;
+	}
+
+	public void setPassword(String password) {
+		Password = password;
+	}
+
+	public String getAccessLevel() {
+		return AccessLevel;
+	}
+
+	public void setAccessLevel(String accessLevel) {
+		AccessLevel = accessLevel;
+	}
 }

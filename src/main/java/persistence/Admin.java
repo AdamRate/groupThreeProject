@@ -6,53 +6,53 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Movie {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
-	private String title;
-	private String genre;
-	private String ageRating;
-	
-	public Movie(){}
-	
-	public Movie(Long id, String title, String genre, String ageRating) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.genre = genre;
-		this.ageRating = ageRating;
-	}
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getGenre() {
-		return genre;
-	}
-	public void setGenre(String genre) {
-		this.genre = genre;
-	}
-	public String getAgeRating() {
-		return ageRating;
-	}
-	public void setAgeRating(String ageRating) {
-		this.ageRating = ageRating;
-	}
-	
-	
-	
+public class Admin {
 
-	
-	
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long AdminID;
+	private Long UserID;
+	private String Name;
+	private String Email;
+
+	public Admin(){}
+
+	public Admin(Long userID, String name, String email) {
+		super();
+		UserID = userID;
+		Name = name;
+		Email = email;
+	}
+
+	public Long getAdminID() {
+		return AdminID;
+	}
+
+	public void setAdminID(Long adminID) {
+		AdminID = adminID;
+	}
+
+	public Long getUserID() {
+		return UserID;
+	}
+
+	public void setUserID(Long userID) {
+		UserID = userID;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public String getEmail() {
+		return Email;
+	}
+
+	public void setEmail(String email) {
+		Email = email;
+	}
 }
