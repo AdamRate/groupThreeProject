@@ -9,12 +9,10 @@
         msg.setFilmNo = function(val){ msg.filmNo = val;}
 
         msg.addData = function() {
-            console.log("writing film data to service.");
 
             filmDal.getFilmList("https://raw.githubusercontent.com/MorickClive/hangman/master/res/movies.json").then(
                 function (results) {
                     msg.filmDat = results;
-                    console.log(results);
                 }
             );
         }
