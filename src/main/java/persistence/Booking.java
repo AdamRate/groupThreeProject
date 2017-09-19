@@ -1,9 +1,6 @@
 package persistence;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Booking {
@@ -11,9 +8,13 @@ public class Booking {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long BookingID;
+	@Column
 	private String CustomerID;
+	@Column
 	private Long TicketID;
+	@Column
 	private Integer Quantity;
+	@Column
 	private Long ScreeningID;
 
 	public Booking(){}

@@ -1,9 +1,6 @@
 package persistence;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Time;
 
 @Entity
@@ -12,8 +9,11 @@ public class Screening {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long ScreeningID;
+	@Column
 	private Integer ScreenNumber;
+	@Column
 	private Long MovieID;
+	@Column
 	private Time TimeSlot;
 
 	public Screening(){}
