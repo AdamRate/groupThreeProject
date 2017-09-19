@@ -16,6 +16,44 @@
         <li class="breadcrumb-item active">All Films</li>
       </ol>
 
+        <!-- Film One -->
+        <div class="row" data-ng-repeat="films in filmList track by $index" >
+            <div class="col-md-7">
+                <a href="#">
+
+                    <section class="p-0" id="portfolio" style="width:200%" >
+                        <div class="container-fluid" >
+                            <div class="row no-gutter popup-gallery">
+                                <div class="col-lg-4 col-sm-6">
+                                    <a class="portfolio-box">
+                                        <!--   <a class="portfolio-box" href="FILM LINK HERE">-->
+                                        <img class="img-fluid" src="{{films['img']}}" alt="">
+                                        <div class="portfolio-box-caption">
+                                            <div class="portfolio-box-caption-content">
+                                                <div class="project-name">
+                                                    <b> {{films['name']}} </b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                    </section>
+                </a>
+            </div>
+
+            <div class="col-md-5">
+                <h3>{{films['name']}}</h3>
+                <p> {{films['desc']}} </p>
+                <a class="btn btn-primary" ng-click="allFilms.navigate($index)">Go To Film!
+
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <hr>
+        </div>
+
+      <hr>
+
       <!-- Film One -->
       <div class="row">
         <div class="col-md-7">

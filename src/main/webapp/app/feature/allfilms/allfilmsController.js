@@ -1,14 +1,15 @@
 (function() {
 
-    var aFilmsController =  function($state, filmLoader) {
+    var aFilmsController =  function($state, filmLoader, $scope) {
         var vm = this;
 
+        vm.filmList = [];
         vm.filmList = filmLoader['filmDat'];
+        $scope.filmList = filmLoader['filmDat'];
 
         // if our service doesn't have a film list - populate it.
         if(filmLoader['filmDat'] == undefined){
             filmLoader['addData']();
-            console.log(filmLoader['filmDat']);
         }
 
         vm.navigate = function(movieNum){
@@ -23,5 +24,5 @@
         }
     };
 
-    angular.module('cinema').controller('aFilmsController', ['$state', 'filmLoader', aFilmsController]);
+    angular.module('cinema').controller('aFilmsController', ['$state', 'filmLoader', '$scope', aFilmsController]);
 }());
