@@ -18,7 +18,7 @@
 
         }).state("signin", {
             url:"/signin",
-            templateUrl:"src/main/webapp/app/feature/sigin/sigin.html"
+            templateUrl:"src/main/webapp/app/feature/signin/signin.html"
 
         }).state("contact", {
             url:"/contact",
