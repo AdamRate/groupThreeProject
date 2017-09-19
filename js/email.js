@@ -27,17 +27,6 @@
             return rePhone.test(phone);
         }
 
-        // function validateHuman(honeypot) {
-        //     console.log("inside validateHuman");
-        //
-        //     if (honeypot) {  //if hidden form filled up
-        //         console.log("Robot Detected!");
-        //         return true;
-        //     } else {
-        //         console.log("Welcome Human!");
-        //     }
-        // }
-
         function reset() {
             vm.name = "";
             vm.phone = "";

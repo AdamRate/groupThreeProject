@@ -8,14 +8,14 @@
         $scope.filmList = filmLoader['filmDat'];
 
         // if our service doesn't have a film list - populate it.
-        if(filmLoader['filmDat'] == undefined){
+        if(filmLoader['filmDat'] === undefined){
             filmLoader['addData']();
         }
 
         vm.navigate = function(movieNum){
             // console.log("works, sort of"); //indeed it does
             // only navigate if we can access the database
-            if(filmLoader['filmDat'] != undefined) {
+            if(filmLoader['filmDat'] !== undefined) {
                 filmLoader['setFilmNo'](movieNum);
                 // here is where I commit our navigation
                 $state.go('specificFilm');

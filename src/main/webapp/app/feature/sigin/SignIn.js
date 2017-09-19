@@ -11,7 +11,6 @@ function makeNewUser(name,email,age,phone,pass) {
 
 function register(name, age, phone, email, password1, password2){
     if (password1 !== password2){
-        alert("Your Passwords do not match");
     }   
     else{
         makeNewUser(name, email, age, phone, password1);        
@@ -19,8 +18,6 @@ function register(name, age, phone, email, password1, password2){
     return false;
 }
 
-function makeNewUser(name,email,age,phone,pass) {
-}
 function signIn(email, password){
     attemptToSignIn(email, password);
     
@@ -49,19 +46,12 @@ function attemptToSignIn(email,pass) {
             if (pass===ARRAY_OF_USER_PASSWORDS[i]){
                 realSignIn(email,pass);
             } else {
-                alert("Your password is incorrect");
+                //alert("Your password is incorrect");
             }
         } else{
-            alert("Your email is either incorrect or you do not have an account");
+           // alert("Your email is either incorrect or you do not have an account");
         }
     }
-}
-
-
-function signIn(email, password){
-    attemptToSignIn(email, password);
-    
-    return false;
 }
 
 
