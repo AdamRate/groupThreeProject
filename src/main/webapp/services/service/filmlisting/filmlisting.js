@@ -1,6 +1,6 @@
 (function() {
 
-    var filmLoader =  function( filmDal, $q) {
+    var filmLoader =  function( filmDal, $q, $state) {
         var memory = {}
         memory.deferred = $q.defer();
         memory.filmNo = 0;
@@ -21,9 +21,14 @@
         memory.retrieveData = function(){return deferred.promise()};
         memory.setFilmNo = function(val){ memory.filmNo = val;}
 
+        memory.navigate = function(val){
+                memory.filmNo = val;
+                $state.go('specificFilm');
+        };
+
         return memory;
     };
 
 
-    angular.module('cinema').service('filmLoader', ['filmDal','$q', filmLoader]);
+    angular.module('cinema').service('filmLoader', ['filmDal','$q', '$state', filmLoader]);
 }());

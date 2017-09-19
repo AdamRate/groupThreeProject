@@ -9,17 +9,7 @@
             vm.filmList = data;
         });
 
-        vm.navigate = function (movieNum) {
-            // only navigate if we can access the database
-                if (vm.filmList.length > 0) {
-                    filmLoader['setFilmNo'](movieNum);
-                    // here is where I commit our navigation
-                    $state.go('specificFilm');
-                }
-                else {
-                    window.alert("Warning - our database hasn't loaded yet; please wait.");
-                }
-        };
+        vm.navigate = function (movieNum) { filmLoader['navigate'](movieNum) };
     }
 
         angular.module('cinema').controller('aFilmsController', ['$state', 'filmLoader', aFilmsController]);
