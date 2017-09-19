@@ -91,16 +91,28 @@
     <div>
     <!-- /.container -->
     </div>
+
+  </body>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; QAC Cinema's Ltd 2017</p>
       </div>
+        <br>
+      <div align="center">
+          <button onclick="toTop()">To Top</button> |
+          <button onclick="window.history.back()">Go Back</button>
+      </div>
       <!-- /.container -->
     </footer>
 
 
-
-  </body>
-
 </html>
+<script>
+    // This is just a global helper function
+    // perhaps we can move this behind the scenes?
+    function toTop() {
+        document.body.scrollTop = 0; // For Chrome, Safari and Opera
+        document.documentElement.scrollTop = 0; // For IE and Firefox
+    }
+</script>
