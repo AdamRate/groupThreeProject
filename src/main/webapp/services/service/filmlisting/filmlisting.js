@@ -1,28 +1,34 @@
 (function() {
 
-    var filmLoader =  function( filmDal) {
-        var msg = {};
-        msg.filmNo = 0;
-        msg.filmDat = undefined;
+    var filmLoader =  function( filmDal, $q, $state) {
+        var memory = {}
+        memory.deferred = $q.defer();
+        memory.filmNo = 0;
 
-        msg.retrieveData = function(){return msg.filmDat};
-        msg.setFilmNo = function(val){ msg.filmNo = val;}
+        filmDal.getFilmList("https://raw.githubusercontent.com/MorickClive/hangman/master/res/movies.json").then(
+            function (results) {
+                memory.deferred.resolve(results);
+                console.log("JSON Database file returns:")
+                console.log(results);
+            }
+        );
 
-        msg.addData = function() {
-
-            filmDal.getFilmList("https://raw.githubusercontent.com/MorickClive/hangman/master/res/movies.json").then(
-                function (results) {
-                    msg.filmDat = results;
-                }
-            );
+        memory.getFilms = function ()
+        {
+            return memory.deferred.promise;
         }
 
-        // episode 11: https://www.youtube.com/watch?v=rHmk0UhJSb4
-        // episode 12: https://www.youtube.com/watch?v=CqaoKt1Gvyk
+        memory.retrieveData = function(){return deferred.promise()};
+        memory.setFilmNo = function(val){ memory.filmNo = val;}
 
-        return msg;
+        memory.navigate = function(val){
+                memory.filmNo = val;
+                $state.go('specificFilm');
+        };
+
+        return memory;
     };
 
 
-    angular.module('cinema').service('filmLoader', ['filmDal', filmLoader]);
+    angular.module('cinema').service('filmLoader', ['filmDal','$q', '$state', filmLoader]);
 }());
