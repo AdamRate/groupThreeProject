@@ -10,9 +10,9 @@ public class TestMain {
         Connection myConn = db.createConnection("sql8.freemysqlhosting.net", "3306",
                 "sql8195133", "sql8195133", "wWNmUR5lgl");
 
-        System.out.println(db.getUsername(myConn, 1));
+//        System.out.println(db.getUsername(myConn, 1));
 
-//        db.createCustomerUser(myConn, 2, "TEST", "TEST");
+        db.createCustomerUser(myConn, 2, "TEST", "TEST");
 
 
 

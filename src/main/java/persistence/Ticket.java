@@ -1,9 +1,6 @@
 package persistence;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Ticket {
@@ -11,7 +8,9 @@ public class Ticket {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long TicketID;
+	@Column
 	private String TicketType;
+	@Column
 	private Double Price;
 
 	public Ticket(){}

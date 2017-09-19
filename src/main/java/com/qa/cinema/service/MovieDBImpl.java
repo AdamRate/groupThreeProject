@@ -1,6 +1,7 @@
-//package business;
+//package com.qa.cinema.service;
 //
-//import java.util.Collection;
+//import persistence.Movie;
+//import util.JSONUtil;
 //
 //import javax.ejb.Stateless;
 //import javax.enterprise.inject.Default;
@@ -8,10 +9,7 @@
 //import javax.persistence.EntityManager;
 //import javax.persistence.PersistenceContext;
 //import javax.persistence.Query;
-//
-//import persistence.Movie;
-//
-//import util.JSONUtil;
+//import java.util.Collection;
 //
 //@Default
 //@Stateless

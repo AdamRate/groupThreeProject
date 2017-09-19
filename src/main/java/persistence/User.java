@@ -1,9 +1,6 @@
 package persistence;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
@@ -11,8 +8,11 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long UserID;
+	@Column
 	private String Username;
+	@Column
 	private String Password;
+	@Column
 	private String AccessLevel;
 	
 	public User(){}
