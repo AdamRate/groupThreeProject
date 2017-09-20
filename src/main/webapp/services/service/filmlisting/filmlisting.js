@@ -5,7 +5,7 @@
         memory.deferred = $q.defer();
         memory.filmNo = 0;
 
-        filmDal.getFilmList("https://raw.githubusercontent.com/MorickClive/hangman/master/res/movies.json").then(
+        filmDal.getFilmList("https://raw.githubusercontent.com/MaryOpenshaw/AngualrJS/master/movies.json").then(
             function (results) {
                 memory.deferred.resolve(results);
                 console.log("JSON Database file returns:")

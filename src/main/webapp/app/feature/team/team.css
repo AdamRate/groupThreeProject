@@ -14,7 +14,7 @@ body {
 .pic {
     height: 450px;
     width: 470px;
-    transform: rotate(90deg);
+
     object-fit: fill;
 
     border:2px solid #fff;
