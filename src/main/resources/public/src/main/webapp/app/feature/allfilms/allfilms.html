@@ -15,9 +15,9 @@
 
         <li class="breadcrumb-item active">All Films</li>
       </ol>
-
+        <div><input type="text" ng-model="searchBox" placeholder="Search"></div>
         <!-- Film One -->
-        <div class="row" data-ng-repeat="films in allFilms.filmList track by $index" >
+        <div class="row" data-ng-repeat="films in allFilms.filmList | filter:searchBox track by $index" >
             <div class="col-md-7">
                 <a href="#">
                     <section class="p-0" id="portfolio" style="width:200%" >
@@ -54,32 +54,7 @@
 
       <hr>
 
-      <!-- Pagination -->
-        <!--
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
--->
+
     </div>
     <!-- /.container -->
 
