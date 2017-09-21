@@ -43,7 +43,10 @@
         }).state("team", {
             url:"/team",
             templateUrl:"src/main/webapp/app/feature/team/team.html"
-			
+
+        }).state("booking", {
+            url:"/booking",
+            templateUrl:"src/main/webapp/app/feature/booking/booking.html"
         })
     });
 }());

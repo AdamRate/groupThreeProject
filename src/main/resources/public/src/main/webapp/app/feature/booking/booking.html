@@ -1,0 +1,38 @@
+<div ng-controller="bookingController">
+
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Booking
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a ui-sref="home">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Booking</li>
+    </ol>
+
+
+    <div>
+        Seat map
+    </div>
+
+    <div>
+        Checkout
+    </div>
+    <!-- /.container -->
+
+    <br><br><br><br>
+    <div style="text-align: right;" class="container">
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="FYFL8TCELA676">
+            <input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <br><br>
+    </div>
+
+
+
+</div>
