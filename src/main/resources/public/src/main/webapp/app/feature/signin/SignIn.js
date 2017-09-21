@@ -5,15 +5,24 @@ function showRegistration(){
     
 }
 
-function makeNewUser(name,email,age,phone,pass) {
+function makeNewUser(username,name,email,age,phone,pass) {
     // LIST_OF_USERS.ADD(..........);
+
+    // var NewUser = "INSERT INTO user(Username, Password, AccessLevel) VALUES('"+username+"','"+pass+"','customer')";
+    var NewUser = "INSERT INTO user(Username, FullName, Email, Age, Phone, Password, AccessLevel) VALUES('"+username+"','"+name+"','"+email+"','"+age+"','"+phone+"','"+pass+"','customer')";
+
+
+    console.log(NewUser);
+    document.getElementById('regSuccess').style.display= "inline-block";
+    document.getElementById('register').style.display= "none";
 }
 
-function register(name, age, phone, email, password1, password2){
+function register(username,name, age, phone, email, password1, password2){
     if (password1 !== password2){
+        alert("Passwords do not match");
     }   
     else{
-        makeNewUser(name, email, age, phone, password1);        
+        makeNewUser(username,name, email, age, phone, password1);
     } 
     return false;
 }
