@@ -12,5 +12,5 @@
         vm.navigate = function (movieNum) { filmLoader['navigate'](movieNum) };
     }
 
-          angular.module('cinema').controller('aFilmsController', ['$state', 'filmLoader', aFilmsController]);
+        angular.module('cinema').controller('aFilmsController', ['$state', 'filmLoader', aFilmsController]);
     }());

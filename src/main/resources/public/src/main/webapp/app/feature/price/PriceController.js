@@ -6,3 +6,4 @@
 
     angular.module('cinema').controller('PriceController', [PriceController]);
 }());
+

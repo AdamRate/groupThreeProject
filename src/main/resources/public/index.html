@@ -25,10 +25,9 @@
             <li class="nav-item"><a class="nav-link" ui-sref="allfilms">All Films</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="faq">FAQs</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="pricing">Prices</a></li>
-            <li class="nav-item"><a class="nav-link" ui-sref="booking">Bookings</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="promo"> Promotions</a></li>
             <li class="nav-item"><a class="nav-link" ui-sref="signin">Log In</a></li>
-            <li class="nav-item"><a class="nav-link" ui-sref="team">Team</a></li>
+              <li class="nav-item"><a class="nav-link" ui-sref="team">Team</a></li>
           </ul>
         </div>
       </div>
@@ -78,15 +77,13 @@
   <script src="src/main/webapp/app/feature/futurefilms/futureFilmsController.js"></script>
   <script src="src/main/webapp/app/feature/price/PriceController.js"></script>
   <script src="src/main/webapp/app/feature/signin/SignInController.js"></script>
-  <script src="src/main/webapp/app/feature/signin/SignIn.js"></script>
- <script src="src/main/webapp/app/feature/allfilms/allfilmsController.js"></script>
+  <script src="src/main/webapp/app/feature/allfilms/allfilmsController.js"></script>
   <script src="src/main/webapp/app/feature/specificfilm/specificfilmController.js"></script>
   <script src="src/main/webapp/services/service/filmlisting/filmlisting.js"></script>
     <script src="src/main/webapp/app/feature/team/teamController.js"></script>
     <script src="src/main/webapp/app/feature/FAQ/faqController.js"></script>
     <script src="src/main/webapp/app/feature/promo/promoController.js"></script>
-    <script src="src/main/webapp/app/feature/booking/bookingController.js"> </script>
-     <script src="src/main/webapp/services/dal/dal.js"></script>
+  <script src="src/main/webapp/services/dal/dal.js"></script>
   <script src="src/main/webapp/services/dal/filmFunction.js"></script>
   <script src="js/email.js"></script>
 
@@ -105,8 +102,9 @@
       </div>
         <br>
       <div align="center">
-          <button onclick="toTop()">To Top</button> |
-          <button onclick="window.history.back()">Go Back</button>
+        <button class="btn btn-primary" onclick="window.history.back()">Go Back</button>
+        &nbsp; | &nbsp;
+        <button class="btn btn-primary" onclick="toTop()">To Top</button>
       </div>
       <!-- /.container -->
     </footer>
