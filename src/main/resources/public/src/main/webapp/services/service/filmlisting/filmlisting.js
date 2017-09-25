@@ -8,8 +8,6 @@
         filmDal.getFilmList("https://raw.githubusercontent.com/MaryOpenshaw/AngualrJS/master/movies.json").then(
             function (results) {
                 memory.deferred.resolve(results);
-                console.log("JSON Database file returns:")
-                console.log(results);
             }
         );
 
