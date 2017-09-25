@@ -1,0 +1,64 @@
+<div class="formCustom" ng-controller="adminController">
+    <div id='Bookings'>
+        <div>
+            <br><br>
+            <h1><strong>Administration</strong></h1>
+            <p style="text-align: center;">____________________________</p>
+            <p>Please enter your administrator username & password <br>
+                before attempting to complete any functionality.</p>
+            <br>
+
+
+            <div class="control-group form-group">
+                <div class="controls">
+
+                    <input type="email" placeholder="Username" class="textBoxCust" id="signEmail" required
+                           data-validation-required-message="Please enter your email address.">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+
+                    <input type="password" placeholder="Password" class="textBoxCust" id="signPassword" required
+                           data-validation-required-message="Please enter your phone number.">
+                </div>
+            </div>
+
+
+            <br><br>
+            <h5><strong>Add Screening</strong></h5><br>
+            <!--<p style="text-align: center;">________________</p>-->
+
+
+
+            <form name="sentMessage" id="regForm" novalidate>
+                <div class="control-group form-group">
+                    <div class="controls">
+
+                        <input type="text" placeholder="Screen Number" class="textBoxCust" id="screenNo" required
+                               data-validation-required-message="Please enter the Screen Number.">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+
+                        <input type="text" placeholder="Movie ID" class="textBoxCust" id="movieID" required
+                               data-validation-required-message="Please enter the Movie ID.">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+
+                        <input type="datetime-local" placeholder="Timeslot" class="textBoxCust" id="timeSlot" required
+                               data-validation-required-message="Please enter a valid date/time.">
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Add Screening</button>
+
+            </form>
+
+
+            <br><br><br><br>
+        </div>
+    </div>
