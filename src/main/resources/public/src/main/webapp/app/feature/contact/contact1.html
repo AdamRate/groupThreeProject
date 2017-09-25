@@ -1,0 +1,178 @@
+<!-- Page Content -->
+<div ng-controller="contactController as ctrl">
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <br>
+    <h1 class="mt-4 mb-3">Contact Us
+        <small></small>
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Contact Us</li>
+    </ol>
+
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-lg-8 mb-4">
+            <br>
+            <h3>How to Find Us: </h3>
+            <!-- Embedded Google Map -->
+            <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2678.550208807731!2d-2.2969005711203634!3d53.46644827301642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1504188158590"></iframe>
+            <br><br><br>
+            <h4>Information / Disclaimer:</h4>
+            <p>
+                If you have any queries or feedback that you would like to give, please use the form at the bottom of
+                the page in order to contact us. We strive to answer all of your messages as soon as possible, however
+                we
+                may receive a considerable amount so please allow a waiting time of 3 days before attempting to
+                communicate again.
+            </p>
+            <br>
+        </div>
+
+
+        <!-- Contact Details Column -->
+        <div class="col-lg-4 mb-4">
+            <br><br><br>
+            <h3>Contact Details</h3>
+            <br>
+            <b>Address: </b>
+
+            <p>
+                319501 Wharfside Way, Stretford,
+                <br>Manchester M17 1WD,
+                <br>UK
+            </p>
+            <p>
+                <abbr title="Phone"><b>Phone No:</b></abbr> (123) 456-7890
+            </p>
+            <p>
+                <abbr title="Email">Email</abbr>:
+                <a href="ContactUs@QA-Cinemas.com">ContactUs@QA-Cinemas.com
+                </a>
+            </p>
+            <p>
+                <abbr title="Hours"><b>Opening hours</b></abbr>: <br>
+                Monday - Friday <br>
+                9:00 AM to 5:00 PM
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-8 mb-4">
+            <h3 style="text-align: center;">Get in Touch</h3>
+            <p style="text-align: center;">______________________________________________</p>
+            <br>
+
+            <form id="gform" method="POST" data-ng-submit="ctrl.handleFormSubmit(data)" name="sentMessage">
+                <!--action="https://script.google.com/macros/s/AKfycbypkbM95TFTuce0-LPD5EcKlMTsjchJ0UepQG8b5D03hIC35BeH/exec"-->
+                <!--<fieldset class="pure-group">-->
+                    <!--<label>Full Name:</label>-->
+                    <!--<input type="text" class="form-control" id="name" name="name" required-->
+                           <!--data-validation-required-message="Please enter your name.">-->
+                    <!--<p class="help-block"></p>-->
+                <!--</fieldset>-->
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Full Name:</label>
+                        <input class="form-control" id="name" name="name" ng-model="data.name" required>
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+
+                <!--<fieldset class="pure-group">-->
+                    <!--<label>Email Address:</label>-->
+                    <!--<input type="email" class="form-control" id="email" name="email" required-->
+                           <!--data-validation-required-message="Please enter your email address.">-->
+                <!--</fieldset>-->
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Email Address:</label>
+                        <input type="email" class="form-control" id="email" name="email" ng-model="data.email" required>
+                        <div ng-show="emailInvalid" id="email-invalid">
+                            <div id="email-invalid-message" class="text-center">
+                                <p class="text-danger">Please enter a valid email address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<fieldset class="pure-group">-->
+                    <!--<label>Phone Number:</label>-->
+                    <!--<input type="tel" class="form-control" id="phone" name="phone" required-->
+                           <!--data-validation-required-message="Please enter your phone number.">-->
+                <!--</fieldset>-->
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Mobile Number:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" ng-model="data.phone" required>
+                        <div ng-show="phoneInvalid" id="phone-invalid">
+                            <div id="phone-invalid-message" class="text-center">
+                                <p class="text-danger">Please enter a valid UK mobile number</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<fieldset class="pure-group">-->
+                    <!--<label>Message:</label>-->
+                    <!--<textarea rows="10" cols="100" class="form-control" id="message" name="message" required-->
+                              <!--data-validation-required-message="Please enter your message" maxlength="999"-->
+                              <!--style="resize:none"></textarea>-->
+                <!--</fieldset>-->
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Message:</label>
+                        <textarea rows="10" cols="100" class="form-control" id="message" name="message" ng-model="data.message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                    </div>
+                </div>
+
+                <!-- For success/fail messages -->
+                <br>
+                <!--old button-->
+                <!--<button type="submit" class="btn btn-primary">&nbsp;Send Message</button>-->
+
+
+                <!--new button-->
+                <button type="submit" class="btn btn-primary" data-ng-click="ctrl.handFormSubmit(data)">Send Message</button>
+
+            </form>
+            <!--<div ng-show="thankYou" id="thankyou_message">-->
+                <!--<div id="overlayMessage" >-->
+                    <!--<p class="text-light">Your message has been sent. Thank you for contacting us, and-->
+                        <!--we will get back to you soon!</p>-->
+                    <!--<button class="btn btn-primary" ng-click="contactCtrl.offOverlay()">Return to page</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <br><br>
+        </div>
+
+    </div>
+
+
+    <!-- /.row -->
+</div>
+
+</div>
+
+
+<!-- /.container -->
+<div class="row">
+    <div class="col-lg-8 mb-4">
+
+<div style="display:none;" id="thankyou_message">
+
+    <h2 style="text-align: center">Thanks for contacting us! <br>
+        We will get back to you soon!</h2>
+<br><br><br>
+</div>
+</div>
+</div>

@@ -1,0 +1,152 @@
+<!-- Page Content -->
+<div class="formCustom" ng-controller="SinginController">
+    <div id='signIn'>
+        <div>
+            <br><br>
+            <h1><strong>Log in</strong></h1>
+            <p style="text-align: center;">____________________________</p>
+
+            <br><br>
+            <form name="sentMessage" id="regForm" novalidate>
+                <div class="control-group form-group">
+                    <div class="controls">
+
+                        <input type="email" placeholder="Email Address" class="textBoxCust" id="signEmail" required
+                               data-validation-required-message="Please enter your email address.">
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+
+                        <input type="password" placeholder="Password" class="textBoxCust" id="signPassword" required
+                               data-validation-required-message="Please enter your phone number.">
+                    </div>
+                </div>
+                <div id="success"></div>
+                <!-- For success/fail messages -->
+                <br><br>
+                <button onclick="return signIn(document.getElementById('signEmail').value , document.getElementById('signPassword').value)"
+                        type="submit" class="btn btn-primary">Sign In
+                </button>
+                <button onclick="showRegistration()" type="submit" class="btn btn-primary">Not A Member?</button>
+                <button onclick="forgotDetails()" type="submit" class="btn btn-primary">Forgot Details?</button>
+            </form>
+            <br><br><br><br>
+        </div>
+    </div>
+
+
+    <div id='register' class="row" style="display: none">
+        <!-- <div class="col-lg-8 mb-4"> -->
+        <br>
+        <h1 class="mt-4 mb-3">Register </h1>
+        <p style="text-align: center;">____________________________</p>
+        <br><br>
+
+        <form name="sentMessage" id="regForm" novalidate>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <input type="text" placeholder="Full Name" class="textBoxCust" id="regName" required
+                           data-validation-required-message="Please enter your name.">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <input type="text" placeholder="Username" class="textBoxCust" id="regUsername" required
+                           data-validation-required-message="Please enter your username.">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <input type="tel" placeholder="Age" class="textBoxCust" id="regAge" required
+                           data-validation-required-message="Please enter your age.">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <input type="tel" placeholder="Phone Number" class="textBoxCust" id="regPhone" required
+                           data-validation-required-message="Please enter your phone number.">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <input type="email" placeholder="Email Address" class="textBoxCust" id="regEmail" required
+                           data-validation-required-message="Please enter your email address.">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <input type="password" placeholder="Password" class="textBoxCust" id="regPass1" required
+                           data-validation-required-message="Please enter your password.">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <input type="password" placeholder="Confirm Password" class="textBoxCust" id="regPass2" required
+                           data-validation-required-message="Please enter your password.">
+                </div>
+            </div>
+            <div id="success"></div>
+            <!-- For success/fail messages -->
+            <br><br>
+            <button onclick="return register(document.getElementById('regUsername').value ,document.getElementById('regName').value , document.getElementById('regAge').value , document.getElementById('regPhone').value , document.getElementById('regEmail').value , document.getElementById('regPass1').value , document.getElementById('regPass2').value)"
+                    type="submit" class="btn btn-primary">Register
+            </button>
+        </form>
+        <br><br><br><br>
+
+    </div>
+
+
+</div>
+<!-- /.row -->
+<div class="formCustom">
+
+    <div id='forgot' class="row" style="display: none">
+              
+        <div class="formCustom">
+                    <br><br>
+                    <h1 class="mt-4 mb-3"><strong>Forgotten Details</strong></h1>
+                    <p style="text-align: center;">____________________________</p>
+                      <br>
+                      Please enter the email address you used</h1>
+                    <br><br><br>
+                    
+            <form name="sentMessage" id="regForm" novalidate>
+                          
+                <div class="control-group form-group">
+                                
+                    <div class="controls">
+                                      <input placeholder="Email Address" style="text-align: center" type="email"
+                                             class="form-control" id="forgotEmail" required
+                                             data-validation-required-message="Please enter your email address.">
+                                    
+                    </div>
+                              
+                </div>
+                          
+                <div id="success"></div>
+                          <!-- For success/fail messages -->
+                          <br><br>
+                          
+                <button onclick="remindDetails(document.getElementById('forgotEmail').value)" type="submit"
+                        class="btn btn-primary">Send Verification Email
+                </button>
+                        
+            </form>
+                    <br><br><br>
+                  
+        </div>
+            
+    </div>
+
+    <div id='regSuccess' style="display: none">
+        Congratulations, you made an account!
+    </div>
+        
+</div>
+<!-- /.container -->
+
+
+

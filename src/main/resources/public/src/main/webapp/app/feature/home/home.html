@@ -1,0 +1,111 @@
+<div ng-controller="HomeController as ctrl">
+
+    <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+            <div class="carousel-item active" style="background-image: url('http://s3.amazonaws.com/digitaltrends-uploads-prod/2014/12/ant-man-banner.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3> </h3>
+                    <p> </p>
+                </div>
+            </div>
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div class="carousel-item" style="background-image: url('http://cdn.collider.com/wp-content/uploads/dark-knight-rises-movie-poster-banner-catwoman.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3> </h3>
+                    <p> </p>
+                </div>
+            </div>
+            <!-- Slide Three - Set the background image for this slide in the line below -->
+            <div class="carousel-item" style="background-image: url('https://www.bleedingcool.com/wp-content/uploads/2017/05/18198201_1305343799560849_1174691762453026571_n.png')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3> </h3>
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
+
+    <!-- Page Content -->
+    <div  class="container">
+        <br>
+        <p style="text-align: center;">______________________________________________</p>
+
+        <h1 class="my-4" style="text-align: center;"><strong>Welcome to QA Cinema's</strong></h1>
+
+
+    </div>
+
+    <h4 class="my-4" style="text-align: center;">Quick Links</h4>
+    <div class="panel bw">
+        <a ui-sref="contact"><button class="Xbutton">Contact</button></a>
+        <a ui-sref="futureFilms"><button class="Xbutton">New Movies</button></a>
+        <a ui-sref="faq"><button class="Xbutton">FAQ's</button></a>
+    </div>
+
+    <br>
+    <p style="text-align: center;">_________________________</p>
+
+    <div>
+
+        <!-- Movie Art -->
+
+        <h3 class="my-4" style="text-align: center;"><strong>Whats On Right Now?</strong></h3>
+        <br>
+            <div class="container-fluid" >
+
+                <div class="row no-gutter popup-gallery">
+                    <div class="col-lg-4 col-sm-6" ng-repeat="film in ctrl.filmList track by $index">
+                        <a class="portfolio-box" ng-click="ctrl.navigate($index)" >
+                            <img class="img-fluid" ng-src="{{film['img']}}" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        {{film['name']}}
+                                    </div>
+                                    <div class="project-name">
+                                        {{film['desc']}}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="container">
+                <br>
+                <p style="text-align: center;">______________________________________________</p>
+                <h3 class="my-4" style="text-align: center;">This Week's Pick</h3>
+                <p style="text-align: center;">_______________________________________</p>
+
+                <br>
+                <img class="full" src="src/main/webapp/img/banners/JohnWickBanner.jpg" alt="" style="height: 400px">
+                <iframe width="100%" height="599" src="https://www.youtube.com/embed/XGk2EfbD_Ps" frameborder="0" allowfullscreen></iframe>
+
+            </div>
+
+            <br><br><br>
+            </div>
+            <div  class="container">
+        </div>
+    </div>
+</div>
+

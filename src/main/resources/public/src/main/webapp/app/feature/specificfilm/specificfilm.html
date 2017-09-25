@@ -1,0 +1,120 @@
+<div ng-controller="sFController as film">
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+<br>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+            </li>
+
+            <li class="breadcrumb-item active">Films: {{film.filmDat['name']}}</li>
+        </ol>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">
+ <!--Image, title and description here-->
+                <!-- Heading Row -->
+                <h1> {{film.filmDat['name']}} </h1>
+                <div class="row my-8">
+                    <div class="col-lg-8">
+                        <img class="img-fluid rounded" src="{{film.filmDat['img']}}" alt="" >
+                        <!-- Call to Action Well -->
+                        <div class="card text-white bg-secondary my-4 text-left">
+                            <div class="card-body left">
+                                <p class="text-white m-0">
+                                    <h3 style = "float: left;">Description</h3><br><br>
+                                    <p>{{film.filmDat['desc']}}</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--side bar here-->
+                    <!-- /.col-lg-8 -->
+                    <div class="col-lg-4 mb-4">
+                        <h3>Showing details</h3>
+                        <br>
+                        <b>Release date: </b>
+                        <p>{{film.filmDat['releasedate']}}</p>
+                        <p>
+                            <abbr><b>Run time</b>:</abbr>
+                            {{film.filmDat['runtime']}}
+                        </p>
+                        <p>
+                            <abbr><b>Age rating:</b></abbr>
+                            {{film.filmDat['age']}}
+                        </p>
+                        <p>
+                            <abbr><b>Director: </b></abbr>
+                            <a>{{film.filmDat['director']}}
+                            </a>
+                        </p>
+                        <p>
+                            <abbr><b>Cast:</b> {{film.castList}}</abbr>
+                        </p>
+<!--Booking button here-->
+                        <a class="btn btn-primary btn-lg" onClick="alert('ISSUE: (to team: we need to discuss implementation)')">Book it now!</a>
+                    </div>
+                    <!-- /.col-md-4 -->
+                </div>
+            </div>
+            <div ng-show = "film.filmDat['trailer'] != undefined ? true : false">
+                <p>Trailer: {{film.filmDat['name']}}</p>
+                <iframe width="560" height="315" src="{{film.videoEmbed}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- /.row -->
+            <!-- Content Row -->
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Promotions: Book now to get a (WHOOOOO!) </h4>
+                            <p class="card-text">Get your special reserved seat by booking within the next n=∞ nanoseconds.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a onClick="alert('<paranoia>You shouldn\'t trust these</paranoia>');" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-md-4 -->
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+        <hr>
+        <br>
+
+<!--        &lt;!&ndash; Pagination &ndash;&gt;
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>-->
+
+    </div>
+    <!-- /.container -->
+
+</div>

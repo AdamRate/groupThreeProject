@@ -1,0 +1,62 @@
+<div ng-controller="aFilmsController as allFilms">
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">All Films
+        <small></small>
+
+      </h1>
+
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+        </li>
+
+        <li class="breadcrumb-item active">All Films</li>
+      </ol>
+        <div><input type="text" ng-model="searchBox" placeholder="Search"></div>
+        <!-- Film One -->
+        <div class="row" data-ng-repeat="films in allFilms.filmList | filter:searchBox track by $index" >
+            <div class="col-md-7">
+                <a href="#">
+                    <section class="p-0" id="portfolio" style="width:200%" >
+                        <div class="container-fluid" >
+                            <div class="row no-gutter popup-gallery">
+                                <div class="col-lg-4 col-sm-6">
+                                    <a class="portfolio-box">
+                                        <!--   <a class="portfolio-box" href="FILM LINK HERE">-->
+                                        <img class="img-fluid" height="300px" width="400px" ng-src="{{films['img']}}" alt="">
+                                        <div class="portfolio-box-caption">
+                                            <div class="portfolio-box-caption-content">
+                                                <div class="project-name">
+                                                    <b> {{films['name']}} </b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                    </section>
+                    <br><br>
+                </a>
+            </div>
+
+            <div class="col-md-5">
+                <h3>{{films['name']}}</h3>
+                <p> {{films['desc']}} </p>
+                <a class="btn btn-primary" ng-click="allFilms.navigate($index)">Go To Film!
+
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <hr>
+        </div>
+
+      <hr>
+
+
+    </div>
+    <!-- /.container -->
+
+
+</div>

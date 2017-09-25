@@ -1,0 +1,94 @@
+    <!-- Page Content -->
+    <div class="container" ng-controller="PriceController">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">Booking
+        <small style="font-size: 18px">Pricing Tariffs</small>
+      </h1>
+
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a ui-sref="home">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Booking</li>
+      </ol>
+
+
+      <!-- Content Row -->
+      <div style="text-align: center;" class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h3 class="card-header">Adult</h3>
+            <div class="card-body">
+              <div class="display-4">£15.00</div>
+              <div class="font-italic">per person</div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Ages: 16+</li>
+              <li class="list-group-item">
+                <dropdown></dropdown>
+                <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card card-outline-primary h-100">
+            <h3 class="card-header bg-primary text-white">Student</h3>
+            <div class="card-body">
+              <div class="display-4">£10.00</div>
+              <div class="font-italic">per person</div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">*Valid student card required</li>
+              <li class="list-group-item">
+                <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h3 class="card-header">Child</h3>
+            <div class="card-body">
+              <div class="display-4">£5.00</div>
+              <div class="font-italic">per person</div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Ages: 1-14</li>
+              <li class="list-group-item">
+
+                <!--any button that doesn't was never linked to anything should be disabled untill they are ready to be worked on -->
+                <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+<br><br>
+      <h3 style="text-align: center">Summary</h3>
+      <p style="text-align: center">_______________________________</p>
+      <br><br><br><br><br><br><br><br><br>
+      <p style="text-align: center">________________________________________________________________</p>
+
+
+
+      <div ng-init="myVar = 'src/main/webapp/app/feature/price/SeatPreview/seating.html'">
+        <button class="btn btn-primary"><a ng-href="{{myVar}}">Select Seats</a></button>
+      </div>
+      <!-- /.row -->
+
+
+    </div>
+    <!-- /.container -->
+
+    <br><br><br><br>
+    <div style="text-align: right;" class="container">
+      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="FYFL8TCELA676">
+        <input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>    </div>
+    <br><br>
