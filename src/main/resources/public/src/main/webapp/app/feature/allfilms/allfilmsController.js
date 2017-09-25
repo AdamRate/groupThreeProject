@@ -12,7 +12,9 @@
 
         vm.navigate = function (movieNum) { filmLoader['navigate'](movieNum) };
         vm.doSortBy = function(value){
-            if(value === vm.sortBy){ vm.reverse = !vm.reverse; }
+            if(value === vm.sortBy){
+                vm.reverse = !vm.reverse;
+            }
             vm.sortBy = value;
         }
 

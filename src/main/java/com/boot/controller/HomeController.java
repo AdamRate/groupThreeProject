@@ -6,10 +6,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-	// should auto to index.html
-/*	@RequestMapping("/")
-	public String home(){
-		return "this is a hello world message!";
-	}
-*/
 }
