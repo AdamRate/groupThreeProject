@@ -1,3 +1,4 @@
+
 function showRegistration(){
     document.getElementById('register').style.display= "inline-block";
     document.getElementById('signIn').style.display= "none";
@@ -6,15 +7,39 @@ function showRegistration(){
 }
 
 function makeNewUser(username,name,email,age,phone,pass) {
-    // LIST_OF_USERS.ADD(..........);
-
+    console.log("started makeNewUser 1045");
     // var NewUser = "INSERT INTO user(Username, Password, AccessLevel) VALUES('"+username+"','"+pass+"','customer')";
-    var NewUser = "INSERT INTO user(Username, FullName, Email, Age, Phone, Password, AccessLevel) VALUES('"+username+"','"+name+"','"+email+"','"+age+"','"+phone+"','"+pass+"','customer')";
+    // var NewUser = "INSERT INTO user(Username, FullName, Email, Age, Phone, Password, AccessLevel) VALUES('"+username+"','"+name+"','"+email+"','"+age+"','"+phone+"','"+pass+"','customer')";
+    var NewUser= {
+        "Username": username,
+        "FullName":name,
+        "Email":email,
+        "Age":age,
+        "Phone":phone,
+        "Password":pass,
+        "AccessLevel":'customer'
+    };
 
+    fetch('http://adamrate.github.io/groupThreeProject/CreateUser', {
+        method: 'POST', mode: 'no-cors', body: JSON.stringify(NewUser)
+    }).then(function (response) {
+        console.log(NewUser);
+        console.log(JSON.stringify(NewUser));
+        document.getElementById('regSuccess').style.display= "inline-block";
+        document.getElementById('register').style.display= "none";
+    });
+    NewUser=null;
 
-    console.log(NewUser);
-    document.getElementById('regSuccess').style.display= "inline-block";
-    document.getElementById('register').style.display= "none";
+    // THIS WORKS FOR THE LOCAL HOST
+    // fetch('http://localhost:8081/CreateUser', {
+    //     method: 'POST', mode: 'no-cors', body: JSON.stringify(NewUser)
+    // }).then(function (response) {
+    //     console.log(NewUser);
+    //     console.log(JSON.stringify(NewUser));
+    //     document.getElementById('regSuccess').style.display= "inline-block";
+    //     document.getElementById('register').style.display= "none";
+    // });
+    // NewUser=null;
 }
 
 function register(username,name, age, phone, email, password1, password2){
