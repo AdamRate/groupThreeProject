@@ -44,6 +44,10 @@
             url:"/team",
             templateUrl:"src/main/webapp/app/feature/team/team.html"
 			
+        }).state("admin", {
+            url:"/admin",
+            templateUrl:"src/main/webapp/app/feature/Admin/Admin.html"
+
         })
     });
 }());
