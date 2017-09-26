@@ -3,6 +3,8 @@
     var aFilmsController =  function($state, filmLoader) {
         var vm = this;
         vm.filmList = [];
+        vm.reverse = false;
+        vm.sortBy = 'name';
 
         var promise = filmLoader['getFilms']();
         promise.then(function (data) {

@@ -1,5 +1,5 @@
 <!-- Page Content -->
-<div class="formCustom" ng-controller="SinginController">
+<div class="formCustom" ng-controller="SinginController as ctrl">
     <div id='signIn'>
         <div>
             <br><br>
@@ -11,25 +11,26 @@
                 <div class="control-group form-group">
                     <div class="controls">
 
-                        <input type="email" placeholder="Email Address" class="textBoxCust" id="signEmail" required
+                        <input type="email" placeholder="Email Address" class="textBoxCust" id="signEmail" ng-model="signEmail"
+                              required
                                data-validation-required-message="Please enter your email address.">
                     </div>
                 </div>
                 <div class="control-group form-group">
                     <div class="controls">
 
-                        <input type="password" placeholder="Password" class="textBoxCust" id="signPassword" required
+                        <input type="password" placeholder="Password" class="textBoxCust" id="signPassword" ng-model="signPassword" required
                                data-validation-required-message="Please enter your phone number.">
                     </div>
                 </div>
                 <div id="success"></div>
                 <!-- For success/fail messages -->
                 <br><br>
-                <button onclick="return signIn(document.getElementById('signEmail').value , document.getElementById('signPassword').value)"
+                <button ng-click="ctrl.signIn(signEmail , signPassword)"
                         type="submit" class="btn btn-primary">Sign In
                 </button>
-                <button onclick="showRegistration()" type="submit" class="btn btn-primary">Not A Member?</button>
-                <button onclick="forgotDetails()" type="submit" class="btn btn-primary">Forgot Details?</button>
+                <button ng-click="ctrl.showRegistration()" type="submit" class="btn btn-primary">Not A Member?</button>
+                <button ng-click="ctrl.forgotDetails()" type="submit" class="btn btn-primary">Forgot Details?</button>
             </form>
             <br><br><br><br>
         </div>

@@ -29,7 +29,8 @@
             // consider security for videos
             vm.videoEmbed = $sce.trustAsResourceUrl(vm.filmDat["trailer"]);
         });
-
+        // auto run
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     };
 
     angular.module("cinema").controller("sFController", ['filmLoader', '$state', '$sce', sFController]);
