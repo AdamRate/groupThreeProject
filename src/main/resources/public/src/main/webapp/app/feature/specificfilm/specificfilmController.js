@@ -33,5 +33,5 @@
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     };
 
-    angular.module("cinema").controller("sFController", ['filmLoader', '$state', '$sce', sFController]);
+    angular.module("cinema").controller("sFController", ["filmLoader", "$state", "$sce", sFController]);
 }());

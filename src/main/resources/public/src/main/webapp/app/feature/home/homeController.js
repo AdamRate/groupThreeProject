@@ -5,7 +5,7 @@
         // holds a global set
         vm.filmList = [];
 
-        var promise = filmLoader['getFilms']();
+        var promise = filmLoader["getFilms"]();
         promise.then(function (data) {
             // populate 3x3 grid
             vm.filmList = data.slice(0,9);

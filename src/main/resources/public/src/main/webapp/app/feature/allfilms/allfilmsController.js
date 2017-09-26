@@ -18,7 +18,7 @@
                 vm.reverse = !vm.reverse;
             }
             vm.sortBy = value;
-        }
+        };
 
     };
 
