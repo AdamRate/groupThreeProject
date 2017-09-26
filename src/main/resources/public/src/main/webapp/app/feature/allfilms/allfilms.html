@@ -15,14 +15,35 @@
 
         <li class="breadcrumb-item active">All Films</li>
       </ol>
-
-        <div>
-            <br>
-            <input class="button" ng-model="searchBox" placeholder="Search..." />
-        </div><br><br>
+        <table>
+            <tr>
+                <th></th>
+                <th style="text-align:right">
+                    Sort by:
+                    <a href="#" ng-click="allFilms.doSortBy('name')">Title</a>
+                </th>
+                <th> | </th>
+                <th>
+                    <a href="#" ng-click="allFilms.doSortBy('releaseDate')">Release date</a>
+                </th>
+                <th> | </th>
+                <th style="font-weight: normal;">Ordered: {{ (allFilms.reverse && 'reverse' || 'alphabetical');}}</th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    Film Finder:
+                </th>
+                <th>
+                    <div><input class="button" ng-model="searchBox" placeholder="Search..." /></div>
+                </th>
+            </tr>
+        </table>
+        <br>
 
         <!-- Film One -->
-        <div class="row" data-ng-repeat="films in allFilms.filmList | filter:searchBox track by $index" >
+        <div class="row" data-ng-repeat="films in allFilms.filmList | orderBy:allFilms.sortBy:allFilms.reverse | filter:searchBox" >
             <div class="col-md-7">
                 <a href="#">
                     <section class="p-0" id="portfolio" style="width:200%" >
@@ -49,7 +70,7 @@
             <div class="col-md-5">
                 <h3>{{films['name']}}</h3>
                 <p> {{films['desc']}} </p>
-                <a class="btn btn-primary" ng-click="allFilms.navigate($index)">Go To Film!
+                <a class="btn btn-primary" ng-click="allFilms.navigate(films['id'])">Go To Film!
 
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>

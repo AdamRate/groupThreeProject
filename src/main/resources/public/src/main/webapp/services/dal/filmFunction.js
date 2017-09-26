@@ -9,5 +9,9 @@
         this.getFilmList = function (url) {
             return dal.http.GET(url);
         };
+
+        this.sendUserData = function (url, item) {
+            return dal.http.POST(url, item);
+        };
     }
 }());

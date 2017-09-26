@@ -7,6 +7,10 @@
 
         filmDal.getFilmList("https://raw.githubusercontent.com/MaryOpenshaw/AngualrJS/master/movies.json").then(
             function (results) {
+                /* // Helps show details about data we are pulling in.
+                console.log("Result from deferred:");
+                console.log(results);
+                */
                 memory.deferred.resolve(results);
             }
         );
