@@ -5,16 +5,15 @@
         // holds a global set
         vm.filmList = [];
 
-        var promise = filmLoader["getFilms"]();
+        var promise = filmLoader['getFilms']();
         promise.then(function (data) {
             // populate 3x3 grid
             vm.filmList = data.slice(0,9);
         });
 
         //DIY: this is dup data
-        vm.navigate = function (movieNum) {
-            filmLoader["navigate"](movieNum); };
+        vm.navigate = function (movieNum) { filmLoader['navigate'](movieNum); };
     };
 
-    angular.module("cinema").controller("HomeController", ['filmLoader', '$state', HomeController]);
+    angular.module('cinema').controller('HomeController', ['filmLoader', '$state', HomeController]);
 }());

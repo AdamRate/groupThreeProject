@@ -9,6 +9,8 @@
         vm.emailInvaild = false;
         vm.thankYou = false;
 
+        var empty = {name: "", phone: "", email: "", message: "", honeypot: ""};
+
         vm.offOverlay = function () {
             vm.thankYou = false;
         };
@@ -16,6 +18,7 @@
         function validEmail(email) { // see:
             var reEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
             return reEmail.test(email);
+
         }
 
         function validPhone(phone) { // see:
@@ -44,13 +47,13 @@
             } else {
                 var googleScript = "https://script.google.com/macros/s/AKfycbypkbM95TFTuce0-LPD5EcKlMTsjchJ0UepQG8b5D03hIC35BeH/exec";
                 var encoded = Object.keys(data).map(function (k) {
-                    return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-                }).join("&");
+                    return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]);
+                }).join('&');
                 $http({
-                    method: "POST",
+                    method: 'POST',
                     url: googleScript,
                     data: encoded,
-                    headers: {"Content-Type": "application/x-www-form-urlencoded"}
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 }).then(function(response) {
                         vm.thankYou = true;
                         reset();
@@ -67,4 +70,4 @@
         };
     };
 
-    angular.module("cinema").controller("contactController", ["$http", contactController])})()
+    angular.module('cinema').controller('contactController', ['$http', contactController])})()

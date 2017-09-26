@@ -6,21 +6,20 @@
         vm.reverse = false;
         vm.sortBy = 'name';
 
-        var promise = filmLoader["getFilms"]();
+        var promise = filmLoader['getFilms']();
         promise.then(function (data) {
             vm.filmList = data;
         });
 
-        vm.navigate = function (movieNum) {
-            filmLoader["navigate"](movieNum); };
+        vm.navigate = function (movieNum) { filmLoader['navigate'](movieNum) };
         vm.doSortBy = function(value){
             if(value === vm.sortBy){
                 vm.reverse = !vm.reverse;
             }
             vm.sortBy = value;
-        };
+        }
 
-    };
+    }
 
-        angular.module("cinema").controller("aFilmsController", ['$state', 'filmLoader', aFilmsController]);
+        angular.module('cinema').controller('aFilmsController', ['$state', 'filmLoader', aFilmsController]);
     }());

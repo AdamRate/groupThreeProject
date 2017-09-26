@@ -4,5 +4,5 @@
         var vm = this;
     };
 
-    angular.module("cinema").controller("serviceController", [serviceController]);
+    angular.module('cinema').controller('serviceController', [serviceController]);
 }());
