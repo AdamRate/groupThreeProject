@@ -5,7 +5,7 @@
         vm.filmDat = [];
 
         // load film data
-        var promise = filmLoader['getFilms']();
+        var promise = filmLoader["getFilms"]();
         promise.then(function (data) {
             ////
             // When film data loaded, perform this.
@@ -16,12 +16,12 @@
             //format array string to singular string.
             vm.castList = (function () {
                 var str = "";
-                for (var x = 0; x < vm.filmDat['castList'].length; x++) {
-                    if (x === vm.filmDat['castList'].length - 1) {
-                        str += vm.filmDat['castList'][x] + ".";
+                for (var x = 0; x < vm.filmDat["castList"].length; x++) {
+                    if (x === vm.filmDat["castList"].length - 1) {
+                        str += vm.filmDat["castList"][x] + ".";
                     }
                     else {
-                        str += vm.filmDat['castList'][x] + ", ";
+                        str += vm.filmDat["castList"][x] + ", ";
                     }
                 }
                 return str;

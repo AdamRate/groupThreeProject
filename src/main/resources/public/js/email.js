@@ -9,8 +9,6 @@
         vm.emailInvaild = false;
         vm.thankYou = false;
 
-        var empty = {name: "", phone: "", email: "", message: "", honeypot: ""};
-
         vm.offOverlay = function () {
             vm.thankYou = false;
         };
@@ -18,7 +16,6 @@
         function validEmail(email) { // see:
             var reEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
             return reEmail.test(email);
-
         }
 
         function validPhone(phone) { // see:
@@ -53,7 +50,7 @@
                     method: 'POST',
                     url: googleScript,
                     data: encoded,
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                    headers: {"Content-Type": "application/x-www-form-urlencoded"}
                 }).then(function(response) {
                         vm.thankYou = true;
                         reset();

@@ -48,6 +48,6 @@
             url:"/admin",
             templateUrl:"src/main/webapp/app/feature/Admin/Admin.html"
 
-        })
+        });
     });
 }());
