@@ -44,10 +44,10 @@
             } else {
                 var googleScript = "https://script.google.com/macros/s/AKfycbypkbM95TFTuce0-LPD5EcKlMTsjchJ0UepQG8b5D03hIC35BeH/exec";
                 var encoded = Object.keys(data).map(function (k) {
-                    return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]);
-                }).join('&');
+                    return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                }).join("&");
                 $http({
-                    method: 'POST',
+                    method: "POST",
                     url: googleScript,
                     data: encoded,
                     headers: {"Content-Type": "application/x-www-form-urlencoded"}
@@ -67,4 +67,4 @@
         };
     };
 
-    angular.module('cinema').controller('contactController', ['$http', contactController])})()
+    angular.module("cinema").controller("contactController", ["$http", contactController])})()

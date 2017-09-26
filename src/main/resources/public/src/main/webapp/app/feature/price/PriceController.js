@@ -4,6 +4,6 @@
         var vm = this;
     };
 
-    angular.module('cinema').controller('PriceController', [PriceController]);
+    angular.module("cinema").controller("PriceController", [PriceController]);
 }());
 

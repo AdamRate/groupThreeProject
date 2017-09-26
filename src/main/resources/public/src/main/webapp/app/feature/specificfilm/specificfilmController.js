@@ -12,7 +12,7 @@
             ////
 
             // load our specific data by movie value stored in service.
-            vm.filmDat = data[filmLoader['filmNo']];
+            vm.filmDat = data[filmLoader["filmNo"]];
             //format array string to singular string.
             vm.castList = (function () {
                 var str = "";

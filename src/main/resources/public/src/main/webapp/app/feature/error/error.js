@@ -4,5 +4,5 @@
         var vm = this;
     };
 
-    angular.module('cinema').controller('errorController', [errorController]);
+    angular.module("cinema").controller("errorController", [errorController]);
 }());
