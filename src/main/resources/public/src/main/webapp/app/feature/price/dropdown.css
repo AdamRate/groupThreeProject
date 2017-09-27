@@ -1,0 +1,7 @@
+select {
+    background-color: #b366ff;
+    border: 2px ;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
