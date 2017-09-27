@@ -73,7 +73,7 @@
     };
 
 
-    angular.module('cinema').service('signInService', ['filmDal', signInService]);
+    angular.module("cinema").service("signInService", ["filmDal", signInService]);
 }());
 
 
