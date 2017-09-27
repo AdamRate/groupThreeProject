@@ -6,7 +6,7 @@
         vm.reverse = false;
         vm.sortBy = 'name';
 
-        var promise = filmLoader['getFilms']();
+        var promise = filmLoader["getFilms"]();
         promise.then(function (data) {
             vm.filmList = data;
         });
@@ -21,5 +21,5 @@
 
     }
 
-        angular.module('cinema').controller('aFilmsController', ['$state', 'filmLoader', aFilmsController]);
+        angular.module("cinema").controller("aFilmsController", ["$state", "filmLoader", aFilmsController]);
     }());
