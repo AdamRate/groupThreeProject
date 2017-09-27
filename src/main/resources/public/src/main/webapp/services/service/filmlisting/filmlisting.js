@@ -18,7 +18,7 @@
         memory.getFilms = function ()
         {
             return memory.deferred.promise;
-        }
+        };
 
         memory.retrieveData = function(){return deferred.promise()};
         memory.setFilmNo = function(val){ memory.filmNo = val;}
