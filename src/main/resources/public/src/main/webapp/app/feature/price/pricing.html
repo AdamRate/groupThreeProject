@@ -1,5 +1,5 @@
     <!-- Page Content -->
-    <div class="container" ng-controller="PriceController">
+    <div class="container" ng-controller="PriceController" xmlns="http://www.w3.org/1999/html">
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Booking
@@ -26,20 +26,20 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Ages: 18+</li>
               <li class="list-group-item">
-                <select name="Choose amount of seats" id="adultSeatSelector">
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="0">3</option>
-                  <option value="1">4</option>
-                  <option value="2">5</option>
-                  <option value="0">6</option>
-                  <option value="1">7</option>
-                  <option value="2">8</option>
-                  <option value="0">9</option>
-                  <option value="1">10</option>
+                <select  id="adultSeatSelector" ng-model="data.adultSeatSelector">
+                  <option value=0>0</option>
+                  <option value=1>1</option>
+                  <option value=2>2</option>
+                  <option value=3>3</option>
+                  <option value=4>4</option>
+                  <option value=5>5</option>
+                  <option value=6>6</option>
+                  <option value=7>7</option>
+                  <option value=8>8</option>
+                  <option value=9>9</option>
+                  <option value=10>10</option>
                 </select>
-               <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
+
               </li>
             </ul>
           </div>
@@ -54,19 +54,20 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">*Valid student card required</li>
               <li class="list-group-item">
-                <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
-                <select name="Choose amount of seats" id="studentSeatSelector">
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="0">3</option>
-                  <option value="1">4</option>
-                  <option value="2">5</option>
-                  <option value="0">6</option>
-                  <option value="1">7</option>
-                  <option value="2">8</option>
-                  <option value="0">9</option>
-                  <option value="1">10</option>
+
+                 <select id="studentSeatSelector" ng-model="data.studentSeatSelector">
+                   <option value=0>0</option>
+                   <option value=1>1</option>
+                   <option value=2>2</option>
+                   <option value=3>3</option>
+                   <option value=4>4</option>
+                   <option value=5>5</option>
+                   <option value=6>6</option>
+                   <option value=7>7</option>
+                   <option value=8>8</option>
+                   <option value=9>9</option>
+                   <option value=10>10</option>
+                 </select>
                 </select>
               </li>
             </ul>
@@ -82,21 +83,21 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Ages: 1-14</li>
               <li class="list-group-item">
-                <select name="Choose amount of seats" id="childSeatSelector">
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="0">3</option>
-                  <option value="1">4</option>
-                  <option value="2">5</option>
-                  <option value="0">6</option>
-                  <option value="1">7</option>
-                  <option value="2">8</option>
-                  <option value="0">9</option>
-                  <option value="1">10</option>
+                <select id="childSeatSelector" ng-model="data.childSeatSelector">
+                  <option value=0>0</option>
+                  <option value=1>1</option>
+                  <option value=2>2</option>
+                  <option value=3>3</option>
+                  <option value=4>4</option>
+                  <option value=5>5</option>
+                  <option value=6>6</option>
+                  <option value=7>7</option>
+                  <option value=8>8</option>
+                  <option value=9>9</option>
+                  <option value=10>10</option>
                 </select>
-                <!--any button that doesn't was never linked to anything should be disabled untill they are ready to be worked on -->
-                <!--<a href="#" class="btn btn-primary">Add to Basket</a>-->
+                </select>
+
 
               </li>
             </ul>
@@ -106,9 +107,52 @@
 <br><br>
       <h3 style="text-align: center">Summary</h3>
       <p style="text-align: center">_______________________________</p>
-      <br><br><br><br><br><br><br><br><br>
-      <p style="text-align: center">________________________________________________________________</p>
+      <br><br>
 
+
+
+      <div style="text-align: center">
+            <p>Number of Adult tickets Selected: {{data.adultSeatSelector}}
+               </p>
+            <p>Number of Students tickets Selected: {{data.studentSeatSelector}}
+               </p>
+            <p>Number of Child tickets Selected: {{data.childSeatSelector }}
+               </p>
+        <p>
+       <!-- <div class="btn"> <button data-ng-click=getTotal()>Total Ticket</button></div>
+             <div class="btn"  data-ng-click=getTotalPrice()></div>-->
+
+       <!-- <p> Total Tickets: {{getTotal()}} </p>
+        <p> Total Price: {{getTotalPrice()}} </p>-->
+          <!--{{data.adultSeatSelector}+{data.studentSeatSelector}-->
+          <!--  total Tickets: {{data.adultSeatSelector + data.studentSeatSelector + data.childSeatSelector}}-->
+             <!--total Price: {{data.adultSeatSelector +15.00 +data.studentSeatSelector*10.00 +data.childSeatSelector*5.00}}-->
+          <script>
+              /*getTotal = function() {
+                  var total =  ass+sst+css;
+                  var ass = data.adultSeatSelector;
+                  var sst =data.studentSeatSelector;
+                  var css= data.childSeatSelector;
+                  return total;
+              }
+
+              getTotalPrice = function() {
+                  var final = sum1+ sum2+sum3;
+                  var sum1 = data.adultSeatSelector*15.00;
+                  var sum2 = data.studentSeatSelector*10.00;
+                  var sum3 = data.childSeatSelector*5.00;
+
+              return final;
+              }
+*/
+          </script>
+        </p>
+      </div>
+
+
+      <br><br>
+
+      <p style="text-align: center">________________________________________________________________</p>
 
 
       <div ng-init="myVar = 'src/main/webapp/app/feature/price/SeatPreview/seating.html'">
