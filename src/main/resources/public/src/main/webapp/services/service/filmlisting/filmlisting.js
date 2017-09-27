@@ -25,7 +25,7 @@
 
         memory.navigate = function(val){
                 memory.filmNo = val;
-                $state.go('specificFilm');
+                $state.go("specificFilm");
         };
 
         return memory;
