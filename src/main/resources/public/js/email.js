@@ -70,4 +70,4 @@
         };
     };
 
-    angular.module('cinema').controller('contactController', ['$http', contactController])})()
+    angular.module("cinema").controller("contactController", ["$http", contactController])})()
