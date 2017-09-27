@@ -1,7 +1,7 @@
 (function() {
 
     var filmLoader =  function( filmDal, $q, $state) {
-        var memory = {}
+        var memory = {};
         memory.deferred = $q.defer();
         memory.filmNo = 0;
 
