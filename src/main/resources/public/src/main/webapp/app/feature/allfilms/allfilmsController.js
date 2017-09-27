@@ -18,9 +18,9 @@
                 vm.reverse = !vm.reverse;
             }
             vm.sortBy = value;
-        }
+        };
 
-    }
+    };
 
         angular.module("cinema").controller("aFilmsController", ["$state", "filmLoader", aFilmsController]);
     }());
