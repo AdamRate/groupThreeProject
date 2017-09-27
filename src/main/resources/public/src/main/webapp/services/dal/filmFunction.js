@@ -10,17 +10,8 @@
             return dal.http.GET(url);
         };
 
-        /*this.saveBook = function (bookToSave) {
-            return dal.http.POST("", bookToSave);
+        this.sendUserData = function (url, item) {
+            return dal.http.POST(url, item);
         };
-
-        this.updateBook = function (bookToUpdate) {
-            return dal.http.PUT("", bookToUpdate);
-        };
-
-        this.deleteBook = function (bookToDelete) {
-            return dal.http.DELETE("", bookToDelete);
-        };*/
-
     }
 }());
