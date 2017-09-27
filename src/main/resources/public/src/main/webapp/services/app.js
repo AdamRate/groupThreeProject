@@ -1,1 +1,1 @@
-var cinemaApp = angular.module('cinema',['ui.router']);
+var cinemaApp = angular.module("cinema",["ui.router"]);
