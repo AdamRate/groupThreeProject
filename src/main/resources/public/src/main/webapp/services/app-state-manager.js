@@ -1,7 +1,7 @@
 "use strict";
 (function () {
 
-    angular.module('cinema').config(function ($stateProvider, $urlRouterProvider) {
+    angular.module("cinema").config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("home");
 
         $stateProvider.state("home", {
