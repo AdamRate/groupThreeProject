@@ -32,5 +32,5 @@
     };
 
 
-    angular.module('cinema').service('filmLoader', ['filmDal','$q', '$state', filmLoader]);
+    angular.module("cinema").service("filmLoader", ["filmDal","$q", "$state", filmLoader]);
 }());
