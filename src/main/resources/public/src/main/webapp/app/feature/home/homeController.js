@@ -15,5 +15,5 @@
         vm.navigate = function (movieNum) { filmLoader["navigate"](movieNum); };
     };
 
-    angular.module("cinema").controller("HomeController" ["ilmLoader" "state" HomeController]);
+    angular.module("cinema").controller("HomeController" ["filmLoader" "state" HomeController]);
 }());
