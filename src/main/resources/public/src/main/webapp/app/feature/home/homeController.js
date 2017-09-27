@@ -12,9 +12,8 @@
         });
 
         //DIY: this is dup data
-        vm.navigate = function (movieNum) {
-            filmLoader["navigate"](movieNum); };
+        vm.navigate = function (movieNum) { filmLoader["navigate"](movieNum); };
     };
 
-    angular.module("cinema").controller("HomeController", ['filmLoader', '$state', HomeController]);
+    angular.module("cinema").controller("HomeController", ["filmLoader", "state", HomeController]);
 }());

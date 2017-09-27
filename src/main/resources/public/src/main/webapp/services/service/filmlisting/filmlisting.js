@@ -20,11 +20,8 @@
             return memory.deferred.promise;
         };
 
-        memory.retrieveData = function(){
-            return deferred.promise();
-        };
-        memory.setFilmNo = function(val){
-            memory.filmNo = val;}
+        memory.retrieveData = function(){return deferred.promise()};
+        memory.setFilmNo = function(val){ memory.filmNo = val;}
 
         memory.navigate = function(val){
                 memory.filmNo = val;
