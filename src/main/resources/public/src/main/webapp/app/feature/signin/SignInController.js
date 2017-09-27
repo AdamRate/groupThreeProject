@@ -20,8 +20,6 @@
             }
             else{
                 signInService.makeNewUser(username,name, email, age, phone, password1);
-
-                // signInService.makeNewUser(username,name, email, age, phone, password1);
             }
 
             return false;
@@ -34,17 +32,26 @@
             return false;
         };
 
-        // this appears to need remind details
-        vm.forgotDetails = function (){
-            console.log("The 'forgotten details' button has been activated.");
-            document.getElementById('forgot').style.display= "inline-block";
-            document.getElementById('signIn').style.display= "none";
+        vm.showForgot = function () {
+            console.log("The 'show Forgot' button has been activated.");
+            document.getElementById('forgot').style.display = "inline-block";
+            document.getElementById('signIn').style.display = "none";
             event.preventDefault();
+        };
+
+        // this appears to need remind details
+        vm.forgotDetails = function (email){
+            console.log("forgot details is running")
+            // console.log("The 'forgotten details' button has been activated.");
+            // document.getElementById('forgot').style.display= "inline-block";
+            // document.getElementById('signIn').style.display= "none";
+            // event.preventDefault();
 
             // find the respective element that stores the email variable.
             // IF myEMAIL EXISTS AND IS VALID
             // THEN:
-                // signInService.remindDetails(myEMAIL) // myEMAIL does not exist
+            signInService.remindDetails(email);
+            // myEMAIL does not exist
 
             return false;
         }

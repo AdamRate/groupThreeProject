@@ -11,7 +11,11 @@
         };
 
         this.sendUserData = function (url, item) {
-            return dal.http.POST(url, item);
+            return dal.http.POOP(url, item);
         };
+
+        this.signMeIn = function (url, item) {
+            return dal.http.GET(url, item);
+        }
     }
 }());
