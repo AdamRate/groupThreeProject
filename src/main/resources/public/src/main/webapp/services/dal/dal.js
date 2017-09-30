@@ -38,6 +38,24 @@
                     return deferred.promise;
                 },
 
+                POOP: function (apiPath, itemToSave) {
+                    console.log(JSON.stringify(itemToSave),"hhhhhh", itemToSave);
+                    var deferred = $q.defer();
+                    $http(
+                        {
+                            method: "post",
+                            url: apiPath,
+                            mode: 'no-cors',
+                            body: JSON.stringify(itemToSave)
+                        }
+                    ).then(function (results) {
+                        deferred.resolve(results.body);
+                    }, function (e) {
+                        deferred.reject(e);
+                    });
+                    return deferred.promise;
+                },
+
                 PUT: function (apiPath, itemToSave) {
                     var deferred = $q.defer();
                     $http(

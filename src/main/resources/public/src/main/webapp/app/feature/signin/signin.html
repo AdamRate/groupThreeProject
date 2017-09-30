@@ -7,13 +7,13 @@
             <p style="text-align: center;">____________________________</p>
 
             <br><br>
-            <form name="sentMessage" id="regForm" novalidate>
+            <form name="sentMessage" id="signForm" novalidate>
                 <div class="control-group form-group">
                     <div class="controls">
 
-                        <input type="email" placeholder="Email Address" class="textBoxCust" id="signEmail" ng-model="signEmail"
+                        <input placeholder="Username" class="textBoxCust" id="signUser" ng-model="signUser"
                               required
-                               data-validation-required-message="Please enter your email address.">
+                               data-validation-required-message="Please enter your Username.">
                     </div>
                 </div>
                 <div class="control-group form-group">
@@ -23,14 +23,14 @@
                                data-validation-required-message="Please enter your phone number.">
                     </div>
                 </div>
-                <div id="success"></div>
+
                 <!-- For success/fail messages -->
                 <br><br>
-                <button ng-click="ctrl.signIn(signEmail , signPassword)"
+                <button ng-click="ctrl.signIn(signUser , signPassword)"
                         type="submit" class="btn btn-primary">Sign In
                 </button>
                 <button ng-click="ctrl.showRegistration()" type="submit" class="btn btn-primary">Not A Member?</button>
-                <button ng-click="ctrl.forgotDetails()" type="submit" class="btn btn-primary">Forgot Details?</button>
+                <button ng-click="ctrl.showForgot()" type="submit" class="btn btn-primary">Forgot Details?</button>
             </form>
             <br><br><br><br>
         </div>
@@ -101,9 +101,8 @@
     </div>
 
 
-</div>
+
 <!-- /.row -->
-<div class="formCustom">
 
     <div id='forgot' class="row" style="display: none">
               
@@ -112,15 +111,15 @@
                     <h1 class="mt-4 mb-3"><strong>Forgotten Details</strong></h1>
                     <p style="text-align: center;">____________________________</p>
                       <br>
-                      Please enter the email address you used</h1>
+                      Please enter the email address you used
                     <br><br><br>
                     
-            <form name="sentMessage" id="regForm" novalidate>
+            <form name="sentMessage" id="forgotForm" novalidate>
                           
                 <div class="control-group form-group">
                                 
                     <div class="controls">
-                                      <input placeholder="Email Address" style="text-align: center" type="email"
+                                      <input placeholder="Email Address" ng-model="forgotEmail"  style="text-align: center" type="email"
                                              class="form-control" id="forgotEmail" required
                                              data-validation-required-message="Please enter your email address.">
                                     
@@ -128,12 +127,11 @@
                               
                 </div>
                           
-                <div id="success"></div>
+
                           <!-- For success/fail messages -->
                           <br><br>
                           
-                <button onclick="remindDetails(document.getElementById('forgotEmail').value)" type="submit"
-                        class="btn btn-primary">Send Verification Email
+                <button ng-click="ctrl.forgotDetails(forgotEmail)" type="submit" class="btn btn-primary">Send Verification Email
                 </button>
                         
             </form>
@@ -146,9 +144,45 @@
     <div id='regSuccess' style="display: none">
         Congratulations, you made an account!
     </div>
+    <div id="successSign" style="display: none">
+        YOU SIGNED IN
+
+        Details:
+
+    </div>
+    <div id="successEmail" style="display:none">
+        You correctly inputted your Email. Your password has been sent to your Email.
+    </div>
+    <div id = "showMeDetails" style="display:none">
+        <div id="showMeFullName">
+            FULL NAME:
+        </div>
+        <div id="showMeUsername">
+            USERNAME:
+        </div>
+        <div id="showMeEmail">
+            EMAIL:
+        </div>
+        <div id="showMePassword">
+            PASSWORD:
+        </div>
+        <div id="showMePhone">
+            PHONE NUMBER:
+        </div>
+        <div id="showMeAge">
+            AGE:
+        </div>
+        <div id="showMeUserID">
+            USER ID:
+        </div>
+        <div id="showMeAccessLevel">
+            ACCESS LEVEL:
+        </div>
+    </div>
         
-</div>
+
 <!-- /.container -->
 
 
 
+</div>
