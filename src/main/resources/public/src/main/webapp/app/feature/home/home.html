@@ -3,9 +3,9 @@
     <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="cursor:pointer"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1" style="cursor:pointer"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2" style="cursor:pointer"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
             <!-- Slide One - Set the background image for this slide in the line below -->
@@ -65,14 +65,15 @@
 
         <!-- Movie Art -->
 
-        <h3 class="my-4" style="text-align: center;"><strong>Whats On Right Now?</strong></h3>
+        <h3 class="my-4" style="text-align: center;"><strong>What's On Right Now?</strong></h3>
         <br>
             <div class="container-fluid" >
 
                 <div class="row no-gutter popup-gallery">
-                    <div class="col-lg-4 col-sm-6" ng-repeat="film in ctrl.filmList track by $index">
-                        <a class="portfolio-box" ng-click="ctrl.navigate($index)" >
-                            <img class="img-fluid" ng-src="{{film['img']}}" alt="">
+                
+                    <div class="col-lg-4 col-sm-6" ng-repeat="film in ctrl.filmList">
+                        <a class="portfolio-box" ng-click="ctrl.navigate(films['id'])" >
+                            <img class="img-fluid" ng-src="film['img']" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
@@ -85,6 +86,7 @@
                             </div>
                         </a>
                     </div>
+                    
                 </div>
 
             </div>

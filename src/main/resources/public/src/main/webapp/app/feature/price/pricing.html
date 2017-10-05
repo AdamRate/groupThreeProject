@@ -1,5 +1,5 @@
     <!-- Page Content -->
-    <div class="container" ng-controller="PriceController" xmlns="http://www.w3.org/1999/html">
+    <div class="container" ng-controller="PriceController as film" xmlns="http://www.w3.org/1999/html">
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Booking
@@ -12,7 +12,52 @@
         </li>
         <li class="breadcrumb-item active">Booking</li>
       </ol>
-
+      
+      <div class="container">
+            <div class="row">
+ <!--Image, title and description here-->
+                <!-- Heading Row -->
+                <h1> {{film.filmDat['name']}} </h1>
+				<div class="card text-white bg-secondary my-4 text-left">
+       			<div class="card-body left">   
+                <div class="row my-8">
+                    <div class="col-lg-8">
+                        <img class="img-fluid rounded" src="{{film.filmDat['img']}}" alt="" >
+                    </div>
+<!--side bar here-->
+                    <!-- /.col-lg-8 -->
+                    <div class="col-lg-4 mb-4">
+                        <h3>Showing details</h3>
+                        <br>
+                        <b>Release date: </b>
+                        <p>{{film.filmDat['releasedate']}}</p>
+                        <p>
+                            <abbr><b>Run time</b>:</abbr>
+                            {{film.filmDat['runtime']}}
+                        </p>
+                        <p>
+                            <abbr><b>Age rating:</b></abbr>
+                            {{film.filmDat['age']}}
+                        </p>
+                        <p>
+                            <abbr><b>Director: </b></abbr>
+                            <a>{{film.filmDat['director']}}
+                            </a>
+                        </p>
+                        <p>
+                            <abbr><b>Cast:</b> {{film.castList}}</abbr>
+                        </p>
+                    </div>
+                    <!-- /.col-md-4 -->
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- End of film descriptor-->
+        <br>
+        <h3 style="text-align: center">Tickets</h3>
+      	<p style="text-align: center">_______________________________</p>
 
       <!-- Content Row -->
       <div style="text-align: center;" class="row">
